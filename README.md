@@ -1,6 +1,6 @@
-[![Build Status](https://codeship.com/projects/<YOUR_PROJECT_UUID>/status?branch=master)
-[![Code Climate](https://codeclimate.com/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/badges/gpa.svg)](https://codeclimate.com/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>)
-[![Coverage Status](https://coveralls.io/repos/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/badge.svg?branch=master)](https://coveralls.io/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>?branch=master)
+[![Build Status](https://codeship.com/projects/currerace/status?branch=master)
+[![Code Climate](https://codeclimate.com/github/Zeeda17/currerace/badges/gpa.svg)](https://codeclimate.com/github/Zeeda17/currerace)
+[![Coverage Status](https://coveralls.io/repos/github/Zeeda17/currerace/badge.svg?branch=master)](https://coveralls.io/github/Zeeda17/currerace?branch=master)
 
 # README
 
