@@ -1,4 +1,4 @@
-[![Build Status](https://codeship.com/projects/currerace/status?branch=master)
+![Build Status](https://codeship.com/projects/currerace/status?branch=master)
 [![Code Climate](https://codeclimate.com/github/Zeeda17/currerace/badges/gpa.svg)](https://codeclimate.com/github/Zeeda17/currerace)
 [![Coverage Status](https://coveralls.io/repos/github/Zeeda17/currerace/badge.svg?branch=master)](https://coveralls.io/github/Zeeda17/currerace?branch=master)
 
