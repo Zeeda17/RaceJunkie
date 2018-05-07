@@ -2,3 +2,9 @@
   Modify me in `app/views/homes/index.html.erb` or change the root directive in
   `config/routes.rb`
 </p>
+<% @users.each do |user| %>
+  <%= user.first_name %> <%= user.last_name %><br />
+<% end %>
+<% @races.each do |race| %>
+  <%= race.name %>
+<% end %>

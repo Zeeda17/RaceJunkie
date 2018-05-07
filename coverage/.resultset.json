@@ -11,6 +11,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/evand/challenges/breakable-toy/currerace-v1/app/models/application_record.rb": [
@@ -38,15 +42,17 @@
       "/Users/evand/challenges/breakable-toy/currerace-v1/app/controllers/homes_controller.rb": [
         1,
         1,
+        5,
+        5,
         null,
         null
       ],
       "/Users/evand/challenges/breakable-toy/currerace-v1/app/models/race.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        1,
+        null
       ],
       "/Users/evand/challenges/breakable-toy/currerace-v1/app/controllers/users_controller.rb": [
         0,
@@ -54,8 +60,15 @@
         null,
         0,
         0
+      ],
+      "/Users/evand/challenges/breakable-toy/currerace-v1/app/controllers/races_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        0
       ]
     },
-    "timestamp": 1525716828
+    "timestamp": 1525719025
   }
 }
