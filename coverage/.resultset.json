@@ -1,36 +1,61 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/evand/challenges/breakable-toy/currerace/app/models/user.rb": [
+      "/Users/evand/challenges/breakable-toy/currerace-v1/app/models/user.rb": [
         1,
         null,
         null,
         1,
         null,
         null,
+        1,
         1,
         1,
         null
       ],
-      "/Users/evand/challenges/breakable-toy/currerace/app/models/application_record.rb": [
+      "/Users/evand/challenges/breakable-toy/currerace-v1/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/evand/challenges/breakable-toy/currerace/app/controllers/application_controller.rb": [
+      "/Users/evand/challenges/breakable-toy/currerace-v1/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        12,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/evand/challenges/breakable-toy/currerace-v1/app/controllers/homes_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/evand/challenges/breakable-toy/currerace-v1/app/models/race.rb": [
         0,
-        null,
-        null,
+        0,
+        0,
         0,
         0
       ],
-      "/Users/evand/challenges/breakable-toy/currerace/app/controllers/homes_controller.rb": [
+      "/Users/evand/challenges/breakable-toy/currerace-v1/app/controllers/users_controller.rb": [
         0,
         0,
+        null,
         0,
         0
       ]
     },
-    "timestamp": 1525574822
+    "timestamp": 1525716828
   }
 }
