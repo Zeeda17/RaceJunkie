@@ -1,3 +1,3 @@
 import 'bable-polyfill';
 import React from 'react';
-ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
