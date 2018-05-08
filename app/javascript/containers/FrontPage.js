@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import RaceTile from '../components/RaceTile'
 
 class FrontPage extends Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class FrontPage extends Component {
     this.state = {
       races: []
     }
+    this.raceChecker = this.raceChecker.bind(this)
   }
 
   componentDidMount(){
@@ -28,7 +30,13 @@ class FrontPage extends Component {
 
   raceChecker(){
     if (this.state.races[0]) {
-      return this.state.races[0].name
+      let allRaces = this.state.races.map((race) => {
+        return(<RaceTile
+          key={race.id}
+          race={race}
+        />)
+      })
+      return(allRaces)
     } else {
       return null;
     }
@@ -40,7 +48,7 @@ class FrontPage extends Component {
 
     return(
       <div>
-        <p>{this.raceChecker()}</p>
+        {this.raceChecker()}
       </div>
     )
   }

@@ -2795,3 +2795,276 @@ Processing by Api::V1::RacesController#index as */*
 Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:18:21 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 102ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:18:23 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.5ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 38ms (Views: 15.6ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:25:26 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 104ms (Views: 96.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:25:27 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.1ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 34ms (Views: 14.1ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:26:02 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 119ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:26:04 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 199ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:26:05 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.0ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 44ms (Views: 14.6ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:27:08 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 103ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:27:09 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.5ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 27ms (Views: 13.7ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:27:34 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 119ms (Views: 109.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:27:35 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.8ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 27ms (Views: 14.1ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:28:23 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 84ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:28:24 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.8ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 66ms (Views: 43.1ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:32:07 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:32:22 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 217ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:32:23 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.3ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 116ms (Views: 15.3ms | ActiveRecord: 99.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:35:55 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 141ms (Views: 127.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:35:57 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 32ms (Views: 15.9ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:36:44 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 202ms (Views: 192.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:36:45 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.9ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 24ms (Views: 11.3ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:36:53 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 192ms (Views: 183.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:36:54 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (10.1ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 233ms (Views: 12.5ms | ActiveRecord: 160.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:37:30 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 143ms (Views: 136.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:37:31 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 35ms (Views: 18.3ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:38:43 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 87ms (Views: 76.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:38:44 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 25ms (Views: 12.6ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:39:12 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 204ms (Views: 189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:39:13 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 23ms (Views: 12.2ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:39:39 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 198ms (Views: 189.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:39:40 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.8ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 33ms (Views: 20.5ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:39:57 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 114ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:39:58 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.4ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 26ms (Views: 13.8ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:40:39 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 125ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:40:40 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 29ms (Views: 13.3ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:42:14 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 97ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:42:14 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 199ms (Views: 17.0ms | ActiveRecord: 181.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:45:09 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 80ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:45:17 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 99ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 12:45:18 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.5ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 30ms (Views: 13.3ms | ActiveRecord: 16.0ms)
+
+
