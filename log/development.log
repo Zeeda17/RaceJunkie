@@ -3068,3 +3068,789 @@ Processing by Api::V1::RacesController#index as */*
 Completed 200 OK in 30ms (Views: 13.3ms | ActiveRecord: 16.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:13:41 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 11934ms (Views: 11924.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:13:54 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (12.4ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 139ms (Views: 44.8ms | ActiveRecord: 94.1ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 13:28:03 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/races/1"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 13:30:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/races/1"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 13:32:02 -0400
+Processing by Api::V1::RacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.2ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 44ms (Views: 17.5ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 13:33:19 -0400
+Processing by Api::V1::RacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (2.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/api/v1/races/2" for 127.0.0.1 at 2018-05-08 13:33:23 -0400
+Processing by Api::V1::RacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/races/5" for 127.0.0.1 at 2018-05-08 13:33:26 -0400
+Processing by Api::V1::RacesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/races/6" for 127.0.0.1 at 2018-05-08 13:33:28 -0400
+Processing by Api::V1::RacesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Race with 'id'=6):
+  
+app/controllers/api/v1/races_controller.rb:7:in `show'
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:34:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/races/1"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:35:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/races/1"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/races" for 127.0.0.1 at 2018-05-08 13:35:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/races"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:35:53 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3516ms (Views: 3508.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:35:58 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (9.6ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 54ms (Views: 11.4ms | ActiveRecord: 41.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:36:22 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:36:23 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:37:22 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 103ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:37:22 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (3.8ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 164ms (Views: 12.4ms | ActiveRecord: 150.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:40:14 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:40:15 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:44:05 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 121ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:44:05 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.2ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 44ms (Views: 24.2ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:44:33 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 118ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:44:34 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 34ms (Views: 12.8ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:44:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/races/1"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:47:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/races/1"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:47:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/races/1"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:47:59 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 105ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:47:59 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (2.6ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 78ms (Views: 16.3ms | ActiveRecord: 60.8ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:48:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/races/1"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.4.3) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.4) lib/rack/proxy.rb:57:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:48:16 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 134ms (Views: 131.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:48:17 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:49:38 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 203ms (Views: 196.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:49:45 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 13:49:45 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.8ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 28ms (Views: 15.4ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:49:48 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:51:55 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 123ms (Views: 116.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:52:09 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 280ms (Views: 269.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:52:43 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 102ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:55:19 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 165ms (Views: 158.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 13:55:20 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.1ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 34ms (Views: 0.7ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:55:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 213ms (Views: 204.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 13:55:34 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 41ms (Views: 0.6ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 13:56:05 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 166ms (Views: 160.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 13:56:06 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 27ms (Views: 0.6ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 14:18:22 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 150ms (Views: 136.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 14:18:24 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.1ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 36ms (Views: 0.6ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 14:20:10 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 134ms (Views: 125.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 14:20:45 -0400
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 14:20:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (9.1ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 142ms (Views: 0.8ms | ActiveRecord: 105.6ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 14:21:17 -0400
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 14:21:17 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 43ms (Views: 0.7ms | ActiveRecord: 22.8ms)
+
+
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 275ms (Views: 251.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-08 14:21:30 -0400
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 14:21:30 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 103ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (12.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 129ms (Views: 0.8ms | ActiveRecord: 78.8ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-08 14:21:31 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/races/2" for 127.0.0.1 at 2018-05-08 14:23:17 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/2"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 100ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/2" for 127.0.0.1 at 2018-05-08 14:23:17 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mRace Load (2.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/races/3" for 127.0.0.1 at 2018-05-08 14:23:20 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/3"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/3" for 127.0.0.1 at 2018-05-08 14:23:20 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mRace Load (1.2ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/races/4" for 127.0.0.1 at 2018-05-08 14:23:22 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/4"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 117ms (Views: 112.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/4" for 127.0.0.1 at 2018-05-08 14:23:23 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mRace Load (0.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/races/4" for 127.0.0.1 at 2018-05-08 14:23:28 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/4"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/4" for 127.0.0.1 at 2018-05-08 14:23:29 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mRace Load (0.8ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/races/5" for 127.0.0.1 at 2018-05-08 14:23:31 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/5"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/5" for 127.0.0.1 at 2018-05-08 14:23:32 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mRace Load (10.4ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:7
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 14:23:34 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 14:23:35 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (44.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 48ms (Views: 3.0ms | ActiveRecord: 44.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-08 14:23:43 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (123.8ms)
+Completed 200 OK in 304ms (Views: 256.4ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-08 14:23:53 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6CvkR8KYDsEg+0p6K3p7XR85+OyzHpcbYBmonf6iE0fFOPGefEDRcPy1basMX6hm8ttXVNs+PodVja1YUhNHUw==", "user"=>{"email"=>"evan@aol.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "evan@aol.com"], ["LIMIT", 1]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", "2018-05-08 18:23:53.658193"], ["last_sign_in_at", "2018-05-08 18:23:53.658193"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2018-05-08 18:23:53.660195"], ["id", 2]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 271ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 14:23:53 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 102ms (Views: 96.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-08 14:23:53 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:3
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
