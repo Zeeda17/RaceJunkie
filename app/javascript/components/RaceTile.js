@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const RaceTile = props => {
 
   return (
     <div className='race-tile'>
-      <h2>{props.race.name} - {props.race.distance}</h2>
+      <h2><Link to={`/races/${props.race.id}`}>{props.race.name}</Link> - {props.race.distance}</h2>
       <h4>${props.race.price}</h4>
     </div>
   )
