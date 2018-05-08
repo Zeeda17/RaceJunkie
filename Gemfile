@@ -61,3 +61,5 @@ gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'foundation-rails', '~> 5.0'
 gem 'webpacker', '~> 3.3'
+gem 'react-rails'
+gem 'react-router-rails', '~>0.11.6.1'

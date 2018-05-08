@@ -6,7 +6,7 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_pack_tag 'hello_react' %>
+
 
   <%= csrf_meta_tags %>
 </head>
@@ -40,6 +40,7 @@
   <%= yield %>
 
   <%= javascript_include_tag 'application' %>
+  <%= javascript_pack_tag 'application' %>
   <%= yield :extra_footer %>
 </body>
 </html>
