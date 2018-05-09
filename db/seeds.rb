@@ -59,3 +59,28 @@ Race.create!(
   distance: "3k",
   description: "Hosted by Rick Ruckus."
 )
+
+Registration.create!(
+  user_id: 1,
+  race_id: 1
+)
+
+Registration.create!(
+  user_id: 1,
+  race_id: 2
+)
+
+Registration.create!(
+  user_id: 2,
+  race_id: 3
+)
+
+Registration.create!(
+  user_id: 2,
+  race_id: 4
+)
+
+Registration.create!(
+  user_id: 1,
+  race_id: 5
+)

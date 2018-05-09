@@ -1,4 +1,6 @@
 class Api::V1::RacesController < ApplicationController
+  protect_from_forgery unless: -> { request.format.json? }
+
   def index
     render json: Race.all
   end
@@ -8,13 +10,19 @@ class Api::V1::RacesController < ApplicationController
   end
 
   def create
-    race = Race.find(params["id"])
-
-    signUp = Registration.create!(races_id: race, users_id: current_user.id)
     binding.pry
+    race = Race.find(params["id"])#would it be better to just use the params["id"]?
+    user = current_user.id
+    signUp = Registration.create!(race: race, user: current_user)
   end
 
   def new
     binding.pry
+  end
+
+  private
+
+  def race_params
+    params.require(:race).permit()#bla bla bla)
   end
 end

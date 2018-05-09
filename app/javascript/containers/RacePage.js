@@ -6,23 +6,26 @@ class RacePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      race: {}
+      race: {},
+      userRegistered: {}
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
   }
 
   handleRegistrationSubmit(){
-    console.log(this.state.race)
-    console.log(JSON.stringify(this.state.race))
-    fetch('/api/v1/races', {
+
+    console.log(`${this.props.params.id}`)
+    let payload = this.state.race
+    fetch(`/api/v1/races/${this.props.params.id}/registrations`, {
+      credentials: 'same-origin',
       method: 'POST',
-      body: JSON.stringify(this.state.race),
-      // headers: { 'Content-Type': 'application/json' }//do I need this?
-    }).then(response => response.json())
+      body: JSON.stringify(payload),
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+    })//.then(response => response.json())
+    .then(response => console.log(response))
   }
 
   componentDidMount(){
-    // debugger
     fetch(`/api/v1/races/${this.props.params.id}`)
     .then(response => {
       if (response.ok) {

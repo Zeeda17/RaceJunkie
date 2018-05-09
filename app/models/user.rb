@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :email, presence: true
 
   has_many :registrations
+  has_many :races, through: :registrations
 
   def formatted_date
     created_at.strftime("%m/%d/%Y")

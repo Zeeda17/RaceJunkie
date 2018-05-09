@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 2018_05_08_193026) do
   end
 
   create_table "registrations", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "races_id", null: false
-    t.index ["races_id"], name: "index_registrations_on_races_id"
-    t.index ["users_id", "races_id"], name: "index_registrations_on_users_id_and_races_id", unique: true
-    t.index ["users_id"], name: "index_registrations_on_users_id"
+    t.bigint "user_id", null: false
+    t.bigint "race_id", null: false
+    t.index ["race_id"], name: "index_registrations_on_race_id"
+    t.index ["user_id", "race_id"], name: "index_registrations_on_user_id_and_race_id", unique: true
+    t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
