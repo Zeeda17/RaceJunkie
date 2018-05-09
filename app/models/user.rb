@@ -8,6 +8,8 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true
 
+  has_many :registrations
+
   def formatted_date
     created_at.strftime("%m/%d/%Y")
   end

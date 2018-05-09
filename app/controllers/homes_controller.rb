@@ -1,6 +1,5 @@
 class HomesController < ApplicationController
   def index
-    @users = User.all
-    @races = Race.all
+    @current_user = current_user
   end
 end
