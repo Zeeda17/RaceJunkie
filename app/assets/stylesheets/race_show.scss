@@ -1,0 +1,60 @@
+@import 'defaults/colors';
+
+.race-breakdown{
+  text-align: center;
+  margin: 5em auto;
+  background-color: $blueish;
+  width: 75%;
+  border-radius: 0.3em;
+}
+
+.race-breakdown-title{
+  text-align: center;
+  background-color: $blueish;
+  border-radius: 0.3em 0.3em 0 0;
+}
+
+.race-breakdown-info{
+  text-align: center;
+  background-color: $redish;
+  border-radius: 0 0 0.3em 0.3em;
+}
+
+#right{
+  float: right;
+  padding: 5em;
+}
+
+#left{
+  float: left;
+  padding-bottom: 200%;
+  padding-left: 5em;
+}
+.test-find{
+  border-style: solid;
+  border-color: black;
+}
+
+.hello-test{
+  position: fixed;
+  width: 100%;
+  background-color: green
+}
+.test-div-after-hello{
+  padding-bottom: 200%;
+  background-color: pink;
+}
+
+.map-registration{
+  padding-left: 10em;
+  position: fixed;
+}
+
+.RaceRegister{
+  background-color: $redish;
+  border-radius: 1em;
+}
+
+.ready{
+  text-align: center;
+}

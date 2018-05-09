@@ -31,10 +31,14 @@ class FrontPage extends Component {
   raceChecker(){
     if (this.state.races[0]) {
       let allRaces = this.state.races.map((race) => {
-        return(<RaceTile
-          key={race.id}
-          race={race}
-        />)
+        return(
+          <div className='race-tile'>
+            <RaceTile
+              key={race.id}
+              race={race}
+            />
+          </div>
+        )
       })
       return(allRaces)
     } else {
