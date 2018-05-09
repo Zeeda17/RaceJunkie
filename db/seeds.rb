@@ -24,3 +24,63 @@ User.create!(
   password_confirmation: "password",
   email: "Evan@aol.com"
 )
+
+Race.create!(
+  name: "Puppy Race",
+  price: 45,
+  distance: "5k",
+  description: "Puppies everywhere. Do I really need to say more?"
+)
+
+Race.create!(
+  name: "Dino Race",
+  price: 5,
+  distance: "20k",
+  description: "You may get eaten, enter at your own risk!"
+)
+
+Race.create!(
+  name: "Dance Race",
+  price: 20,
+  distance: "1k",
+  description: "It's not how fast you cross the finish line but how good you look doing it."
+)
+
+Race.create!(
+  name: "Jackson Jump",
+  price: 100,
+  distance: "5k",
+  description: "Weirldly doesn't have any jumping."
+)
+
+Race.create!(
+  name: "Ruckus Race",
+  price: 45,
+  distance: "3k",
+  description: "Hosted by Rick Ruckus."
+)
+
+Registration.create!(
+  user_id: 1,
+  race_id: 1
+)
+
+Registration.create!(
+  user_id: 1,
+  race_id: 2
+)
+
+Registration.create!(
+  user_id: 2,
+  race_id: 3
+)
+
+Registration.create!(
+  user_id: 2,
+  race_id: 4
+)
+
+Registration.create!(
+  user_id: 1,
+  race_id: 5
+)
