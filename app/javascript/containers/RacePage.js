@@ -47,12 +47,28 @@ class RacePage extends Component {
 
     return(
       <div>
-        <h2>{this.state.race.name} - {this.state.race.distance}</h2>
-        <h4>${this.state.race.price}</h4>
-        <p>{this.state.race.description}</p>
-        <RaceRegister
-          handleRegistrationSubmit={this.handleRegistrationSubmit}
-        />
+        <div className="columns small-8 medium-7" id="left">
+          <div className="race-breakdown">
+            <div className='.race-breakdown-title'>
+              <h2>{this.state.race.name} - {this.state.race.distance}</h2>
+              <h4>${this.state.race.price}</h4>
+            </div>
+            <div className='race-breakdown-info'>
+              <p>{this.state.race.description}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="columns small-4 medium-5" id="right">
+          <div className="map-registration">
+            <RaceRegister
+              handleRegistrationSubmit={this.handleRegistrationSubmit}
+            />
+          </div>
+
+
+        </div>
+
       </div>
     )}
 }
