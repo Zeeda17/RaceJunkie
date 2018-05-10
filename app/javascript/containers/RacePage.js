@@ -1,20 +1,19 @@
 import React, {Component} from 'react';
 import RaceTile from '../components/RaceTile'
 import RaceRegister from '../components/RaceRegister'
+import TeamTile from '../components/TeamTile'
 
 class RacePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      race: {},
-      userRegistered: {}
+      race: {}
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
+    this.showTeams = this.showTeams.bind(this)
   }
 
   handleRegistrationSubmit(){
-
-    console.log(`${this.props.params.id}`)
     let payload = this.state.race
     fetch(`/api/v1/races/${this.props.params.id}/registrations`, {
       credentials: 'same-origin',
@@ -25,7 +24,26 @@ class RacePage extends Component {
     .then(response => console.log(response))
   }
 
+  showTeams(){
+    // debugger;
+    if (this.state.race.teams == null) {
+      return null;
+    }
+    const allTeams = this.state.race.teams.map((team) =>{
+      return(
+        <div>
+          <TeamTile
+            key={team.id}
+            team={team}
+          />
+        </div>
+      )
+    })
+    return(allTeams)
+  }
+
   componentDidMount(){
+    //
     fetch(`/api/v1/races/${this.props.params.id}`)
     .then(response => {
       if (response.ok) {
@@ -38,7 +56,9 @@ class RacePage extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({ race: body })
+      this.setState({
+        race: body
+      })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -55,6 +75,7 @@ class RacePage extends Component {
             </div>
             <div className='race-breakdown-info'>
               <p>{this.state.race.description}</p>
+              {this.showTeams()}
             </div>
           </div>
         </div>
@@ -65,10 +86,7 @@ class RacePage extends Component {
               handleRegistrationSubmit={this.handleRegistrationSubmit}
             />
           </div>
-
-
         </div>
-
       </div>
     )}
 }
