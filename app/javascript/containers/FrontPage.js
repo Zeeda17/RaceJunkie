@@ -6,8 +6,8 @@ class FrontPage extends Component {
     super(props);
     this.state = {
       races: []
-    }
-    this.raceChecker = this.raceChecker.bind(this)
+    };
+    this.raceChecker = this.raceChecker.bind(this);
   }
 
   componentDidMount(){
@@ -29,12 +29,12 @@ class FrontPage extends Component {
   }
 
   raceChecker(){
-    if (this.state.races[0]) {
-      let allRaces = this.state.races.map((race) => {
+    if (this.state.races.length != 0) {
+      const allRaces = this.state.races.map((race) => {
         return(
-          <div className='race-tile'>
+          <div key={race.id} className='race-tile'>
             <RaceTile
-              key={race.id}
+
               race={race}
             />
           </div>
@@ -47,17 +47,12 @@ class FrontPage extends Component {
   }
 
   render(){
-    // debugger
-    let race1 = this.state.races[0]
-
     return(
       <div>
         {this.raceChecker()}
       </div>
     )
   }
-
-
 }
 
 export default FrontPage;

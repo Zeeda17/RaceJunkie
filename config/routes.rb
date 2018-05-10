@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :races, only: [:index, :show, :create] do
-        resources :registrations, only: [:index, :show, :create]
+        resources :registrations, only: [:index, :show, :create] do
+          resources :teams, only: [:show]
+        end
       end
     end
   end
