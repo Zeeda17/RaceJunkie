@@ -84,3 +84,61 @@ Registration.create!(
   user_id: 1,
   race_id: 5
 )
+
+Team.create!(
+  name: "Puppy Punks",
+  moto: "Bad to the Bone",
+  race_id: 1
+)
+
+Team.create!(
+  name: "Drooling Dawgs",
+  moto: "What's up?",
+  race_id: 1
+)
+
+Team.create!(
+  name: "DinoRoars!",
+  moto: "ROAR!",
+  race_id: 2
+)
+
+Team.create!(
+  name: "Race",
+  moto: "Racing Dinos is our game",
+  race_id: 2
+)
+
+Team.create!(
+  name: "Race",
+  moto: "Daning Racers",
+  race_id: 3
+)
+
+Team.create!(
+  name: "Dancing Daisies",
+  moto: "We will blow you away",
+  race_id: 3
+)
+
+Team.create!(
+  name: "Easy as 123",
+  race_id: 4
+)
+
+Team.create!(
+  name: "Want you back",
+  race_id: 4
+)
+
+Team.create!(
+  name: "Ruckus Racers",
+  moto: "We Da Best",
+  race_id: 5
+)
+
+Team.create!(
+  name: "Team Rocket",
+  moto: "Blasting off at the speed of light!",
+  race_id: 5
+)
