@@ -7,10 +7,13 @@ class RacePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      race: {}
+      race: {},
+      showTeams: false
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
     this.showTeams = this.showTeams.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+    this.buttonLabel = this.buttonLabel.bind(this)
   }
 
   handleRegistrationSubmit(){
@@ -28,18 +31,20 @@ class RacePage extends Component {
     // debugger;
     if (this.state.race.teams == null) {
       return null;
-    }
-    const allTeams = this.state.race.teams.map((team) =>{
-      return(
-        <div>
-          <TeamTile
-            key={team.id}
-            team={team}
-          />
-        </div>
-      )
-    })
-    return(allTeams)
+    } else if (this.state.showTeams) {
+        const allTeams = this.state.race.teams.map((team) =>{
+          return(
+            <div key={team.id}>
+              <TeamTile
+                team={team}
+              />
+            </div>
+          )
+        })
+        return(allTeams)
+      } else {
+        return null;
+      }
   }
 
   componentDidMount(){
@@ -63,6 +68,22 @@ class RacePage extends Component {
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
+  buttonLabel(){
+    if (this.state.showTeams){
+      return "Hide Teams"
+    } else {
+      return "Show Teams"
+    }
+  }
+
+  handleClick(){
+    if (this.state.showTeams){
+      this.setState({showTeams: false})
+    } else {
+      this.setState({showTeams: true})
+    }
+  }
+
   render(){
 
     return(
@@ -75,6 +96,7 @@ class RacePage extends Component {
             </div>
             <div className='race-breakdown-info'>
               <p>{this.state.race.description}</p>
+              <button className='display-teams' onClick={this.handleClick} >{this.buttonLabel()}</button>
               {this.showTeams()}
             </div>
           </div>

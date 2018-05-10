@@ -32,9 +32,9 @@ class FrontPage extends Component {
     if (this.state.races.length != 0) {
       const allRaces = this.state.races.map((race) => {
         return(
-          <div className='race-tile'>
+          <div key={race.id} className='race-tile'>
             <RaceTile
-              key={race.id}
+
               race={race}
             />
           </div>
