@@ -10,6 +10,8 @@ class User < ApplicationRecord
 
   has_many :registrations
   has_many :races, through: :registrations
+  has_many :rosters
+  has_many :teams, through: :rosters
 
   def formatted_date
     created_at.strftime("%m/%d/%Y")

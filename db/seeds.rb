@@ -142,3 +142,53 @@ Team.create!(
   moto: "Blasting off at the speed of light!",
   race_id: 5
 )
+
+Roster.create!(
+  user_id: 1,
+  team_id: 1
+)
+
+Roster.create!(
+  user_id: 1,
+  team_id: 3
+)
+
+Roster.create!(
+  user_id: 1,
+  team_id: 5
+)
+
+Roster.create!(
+  user_id: 1,
+  team_id: 7
+)
+
+Roster.create!(
+  user_id: 1,
+  team_id: 9
+)
+
+Roster.create!(
+  user_id: 2,
+  team_id: 2
+)
+
+Roster.create!(
+  user_id: 2,
+  team_id: 3
+)
+
+Roster.create!(
+  user_id: 2,
+  team_id: 6
+)
+
+Roster.create!(
+  user_id: 2,
+  team_id: 8
+)
+
+Roster.create!(
+  user_id: 2,
+  team_id: 10
+)
