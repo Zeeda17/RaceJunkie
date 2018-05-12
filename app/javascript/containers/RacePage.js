@@ -8,30 +8,58 @@ class RacePage extends Component {
     super(props);
     this.state = {
       race: {},
-      showTeams: false
+      selectedTeam: false,
+      joinTeam: '0',
+      showRunners: false,
+      register: false
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
-    this.showTeams = this.showTeams.bind(this)
-    this.handleClick = this.handleClick.bind(this)
-    this.buttonLabel = this.buttonLabel.bind(this)
+    this.selectedTeam = this.selectedTeam.bind(this)
+    this.teamHandleClick = this.teamHandleClick.bind(this)
+    this.teamButtonLabel = this.teamButtonLabel.bind(this)
+    this.runnerHandleClick = this.runnerHandleClick.bind(this)
+    this.runnerButtonLabel = this.runnerButtonLabel.bind(this)
+    this.registerButtonLabel = this.registerButtonLabel.bind(this)
+    this.registerHandleClick = this.registerHandleClick.bind(this)
+    this.joinTeam = this.joinTeam.bind(this)
+    this.teamSelect = this.teamSelect.bind(this)
   }
 
   handleRegistrationSubmit(){
-    let payload = this.state.race
+    let payload =  {joinTeam: this.state.joinTeam}
+    
     fetch(`/api/v1/races/${this.props.params.id}/registrations`, {
       credentials: 'same-origin',
       method: 'POST',
       body: JSON.stringify(payload),
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
-    })//.then(response => response.json())
+    })
     .then(response => console.log(response))
   }
 
-  showTeams(){
-    // debugger;
+  selectedTeam(){
     if (this.state.race.teams == null) {
       return null;
-    } else if (this.state.showTeams) {
+    } else if (this.state.selectedTeam) {
+        const allTeams = this.state.race.teams.map((team) =>{
+          return(
+            <div key={team.id}>
+              <TeamTile
+                team={team}
+              />
+            </div>
+          )
+        })
+        return(allTeams)
+      } else {
+        return null;
+      }
+  }
+
+  showRunners(){
+    if (this.state.race.teams == null) {
+      return null;
+    } else if (this.state.selectedTeam) {
         const allTeams = this.state.race.teams.map((team) =>{
           return(
             <div key={team.id}>
@@ -48,7 +76,6 @@ class RacePage extends Component {
   }
 
   componentDidMount(){
-    //
     fetch(`/api/v1/races/${this.props.params.id}`)
     .then(response => {
       if (response.ok) {
@@ -68,19 +95,79 @@ class RacePage extends Component {
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-  buttonLabel(){
-    if (this.state.showTeams){
+  teamButtonLabel(){
+    if (this.state.selectedTeam){
       return "Hide Teams"
     } else {
       return "Show Teams"
     }
   }
 
-  handleClick(){
-    if (this.state.showTeams){
-      this.setState({showTeams: false})
+  teamHandleClick(){
+    if (this.state.selectedTeam){
+      this.setState({selectedTeam: false})
     } else {
-      this.setState({showTeams: true})
+      this.setState({selectedTeam: true})
+    }
+  }
+
+  runnerButtonLabel(){
+    if (this.state.showRunners){
+      return "Hide Runners"
+    } else {
+      return "Show Runners"
+    }
+  }
+
+  runnerHandleClick(){
+    if (this.state.showRunners){
+      this.setState({showRunners: false})
+    } else {
+      this.setState({showRunners: true})
+    }
+  }
+
+  registerHandleClick(){
+    if (this.state.register == false){
+      this.setState({register: true})
+    } else {
+      this.handleRegistrationSubmit()
+    }
+  }
+
+  registerButtonLabel(){
+    if (this.state.register){
+      return "Want to join a team?"
+    } else {
+      return "Ready to run?"
+    }
+  }
+
+  teamSelect(event){
+    let teamID = event.target.value
+    this.setState({joinTeam: teamID});
+  }
+
+  joinTeam(){
+    if (this.state.register) {
+      if (this.state.race.teams != null) {
+        let teams = this.state.race.teams.map((team) =>{
+          return(
+            <option key={team.id} value={team.id}>{team.name}</option>
+          )
+        });
+        teams.unshift(<option key='0' value="0">I'm running solo</option>);
+
+        return(
+          <div className='join-team'>
+            <select onChange={this.teamSelect}>
+              {teams}
+            </select>
+          </div>
+        )
+      }
+    } else {
+      return null;
     }
   }
 
@@ -96,8 +183,9 @@ class RacePage extends Component {
             </div>
             <div className='race-breakdown-info'>
               <p>{this.state.race.description}</p>
-              <button className='display-teams' onClick={this.handleClick} >{this.buttonLabel()}</button>
-              {this.showTeams()}
+              <button className='display-teams' onClick={this.teamHandleClick} >{this.teamButtonLabel()}</button>
+              <button className='display-runners' onClick={this.runnerHandleClick} >{this.runnerButtonLabel()}</button>
+              {this.selectedTeam()}
             </div>
           </div>
         </div>
@@ -105,6 +193,9 @@ class RacePage extends Component {
         <div className="columns small-4 medium-5" id="right">
           <div className="map-registration">
             <RaceRegister
+              registerHandleClick={this.registerHandleClick}
+              registerButtonLabel={this.registerButtonLabel}
+              joinTeam={this.joinTeam}
               handleRegistrationSubmit={this.handleRegistrationSubmit}
             />
           </div>

@@ -10,10 +10,10 @@ class Api::V1::RegistrationsController < ApplicationController
   end
 
   def create
-    race = Race.find(params["id"])#would it be better to just use the params["id"]?
-    user = current_user.id
-    signUp = Registration.create!(race: race, user: current_user)
+    Registration.create!(race_id: params["race_id"], user: current_user)
+    Roster.create!(user: current_user, team_id: params["joinTeam"])
     # binding.pry
+
   end
 
   def new
