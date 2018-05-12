@@ -29027,3 +29027,957 @@ Processing by Api::V1::RacesController#show as */*
 Completed 200 OK in 435ms (Views: 275.3ms | ActiveRecord: 137.8ms)
 
 
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:01:30 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12740ms (Views: 12728.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:01:44 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (664.33ms)
+Completed 200 OK in 890ms (Views: 575.0ms | ActiveRecord: 283.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:11:32 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 122ms (Views: 114.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:11:33 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (103.4ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (268.54ms)
+Completed 200 OK in 428ms (Views: 175.5ms | ActiveRecord: 230.8ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:12:23 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 95ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:12:24 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (31.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (235.85ms)
+Completed 200 OK in 273ms (Views: 155.7ms | ActiveRecord: 97.7ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:14:40 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 156ms (Views: 146.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:16:44 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 112ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:17:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 121ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:17:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 106ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:18:05 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 78ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:19:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 74ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:19:08 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:19:11 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:19:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 98ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:19:46 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (3.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (172.69ms)
+Completed 200 OK in 404ms (Views: 128.8ms | ActiveRecord: 240.9ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:20:17 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 487ms (Views: 480.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:20:18 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (5.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (239.3ms)
+Completed 200 OK in 285ms (Views: 174.0ms | ActiveRecord: 85.5ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:20:46 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 104ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:20:47 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (165.44ms)
+Completed 200 OK in 204ms (Views: 148.2ms | ActiveRecord: 35.0ms)
+
+
+Started POST "/api/v1/races/1/registrations" for 127.0.0.1 at 2018-05-12 18:20:59 -0400
+Processing by Api::V1::RegistrationsController#create as JSON
+  Parameters: {"joinTeam"=>"0", "race_id"=>"1", "registration"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:13
+  [1m[36mRace Load (2.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:13
+  [1m[36mRegistration Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "registrations" WHERE "registrations"."race_id" = $1 AND "registrations"."user_id" IS NULL LIMIT $2[0m  [["race_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/registrations_controller.rb:13
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/registrations_controller.rb:13
+Completed 422 Unprocessable Entity in 45ms (ActiveRecord: 6.9ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/api/v1/registrations_controller.rb:13:in `create'
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:22:17 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 86ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:22:17 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (2.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (219.71ms)
+Completed 200 OK in 264ms (Views: 198.4ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:23:26 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 297ms (Views: 271.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:23:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 146ms (Views: 137.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:23:34 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (268.08ms)
+Completed 200 OK in 306ms (Views: 217.7ms | ActiveRecord: 67.1ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:26:18 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 92ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:26:19 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.4ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (337.0ms)
+Completed 200 OK in 445ms (Views: 193.8ms | ActiveRecord: 232.2ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:26:54 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 106ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:27:13 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 101ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:27:13 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (2.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (198.88ms)
+Completed 200 OK in 284ms (Views: 177.4ms | ActiveRecord: 62.4ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:27:40 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 88ms (Views: 84.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:27:41 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (3.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (234.55ms)
+Completed 200 OK in 280ms (Views: 141.7ms | ActiveRecord: 113.6ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:29:53 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 87ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:29:54 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (274.15ms)
+Completed 200 OK in 330ms (Views: 261.2ms | ActiveRecord: 46.7ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:30:50 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 121ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:30:51 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (10.2ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (226.3ms)
+Completed 200 OK in 448ms (Views: 160.5ms | ActiveRecord: 257.8ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:31:34 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 112ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:31:35 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (26.2ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (194.79ms)
+Completed 200 OK in 338ms (Views: 167.7ms | ActiveRecord: 148.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:32:01 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 116ms (Views: 109.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:32:01 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.4ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (180.6ms)
+Completed 200 OK in 334ms (Views: 162.4ms | ActiveRecord: 151.1ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:34:20 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:34:21 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (7.82ms)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:37:52 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 94ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:37:52 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (343.84ms)
+Completed 200 OK in 386ms (Views: 191.2ms | ActiveRecord: 166.9ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:39:42 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 116ms (Views: 110.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:39:43 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (197.87ms)
+Completed 200 OK in 262ms (Views: 139.4ms | ActiveRecord: 76.5ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:40:43 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 87ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:40:44 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (163.82ms)
+Completed 200 OK in 212ms (Views: 140.5ms | ActiveRecord: 38.5ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:41:05 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 114ms (Views: 109.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:41:06 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (245.76ms)
+Completed 200 OK in 410ms (Views: 222.1ms | ActiveRecord: 165.9ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:44:13 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 107ms (Views: 100.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:44:14 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (187.32ms)
+Completed 200 OK in 282ms (Views: 160.4ms | ActiveRecord: 98.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-12 18:45:18 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-12 18:45:18 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (44.31ms)
+Completed 200 OK in 49ms (Views: 41.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:45:20 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (8.44ms)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:53:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 141ms (Views: 133.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:53:04 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (2.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (292.94ms)
+Completed 200 OK in 400ms (Views: 243.0ms | ActiveRecord: 122.3ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:53:21 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 80ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:53:21 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.8ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (311.62ms)
+Completed 200 OK in 356ms (Views: 182.5ms | ActiveRecord: 149.1ms)
+
+
+Started GET "/api/v1/races/1/teams" for 127.0.0.1 at 2018-05-12 18:53:29 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"api/v1/races/1/teams"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1/registrations" for 127.0.0.1 at 2018-05-12 18:53:42 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"api/v1/races/1/registrations"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 152ms (Views: 149.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:55:13 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1/registrations" for 127.0.0.1 at 2018-05-12 18:55:14 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"api/v1/races/1/registrations"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 146ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:55:14 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (529.33ms)
+Completed 200 OK in 587ms (Views: 363.1ms | ActiveRecord: 182.6ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 18:55:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 126ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1/registrations" for 127.0.0.1 at 2018-05-12 18:55:34 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"api/v1/races/1/registrations"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 146ms (Views: 142.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 18:55:34 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (506.93ms)
+Completed 200 OK in 561ms (Views: 418.2ms | ActiveRecord: 111.7ms)
+
+
+Started POST "/api/v1/races/1/teams" for 127.0.0.1 at 2018-05-12 18:55:42 -0400
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"newTeamName"=>"test", "newTeamMotto"=>"test", "race_id"=>"1", "team"=>{}}
+No template found for Api::V1::TeamsController#create, rendering head :no_content
+Completed 204 No Content in 10658ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/races/1/teams" for 127.0.0.1 at 2018-05-12 18:56:00 -0400
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"newTeamName"=>"test", "newTeamMotto"=>"test", "race_id"=>"1", "team"=>{}}
+No template found for Api::V1::TeamsController#create, rendering head :no_content
+Completed 204 No Content in 539347ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/races/1/teams" for 127.0.0.1 at 2018-05-12 19:05:04 -0400
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"newTeamName"=>"test", "newTeamMotto"=>"test", "race_id"=>"1", "team"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[36mRegistration Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "registrations" WHERE "registrations"."race_id" = $1 AND "registrations"."user_id" IS NULL LIMIT $2[0m  [["race_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+Completed 422 Unprocessable Entity in 4083ms (ActiveRecord: 20.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/api/v1/teams_controller.rb:10:in `create'
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 19:10:56 -0400
+Started GET "/api/v1/races/1/registrations" for 127.0.0.1 at 2018-05-12 19:10:57 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 138ms (Views: 125.8ms | ActiveRecord: 0.0ms)
+
+
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"api/v1/races/1/registrations"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 117ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 19:10:58 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.0ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (309.86ms)
+Completed 200 OK in 365ms (Views: 216.8ms | ActiveRecord: 127.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-12 19:11:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (8.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 209ms (Views: 203.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-12 19:11:18 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8JyzcqvNNOTxzjnf0UiFMKuuadelhKFxu6ntRXJozwo4FdvLY0dacXeaCwh4Ds2otPD42BL1DYjMuds0mMj+3Q==", "user"=>{"email"=>"evan@aol.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "evan@aol.com"], ["LIMIT", 1]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", "2018-05-12 23:11:18.945747"], ["last_sign_in_at", "2018-05-12 23:11:18.945747"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2018-05-12 23:11:18.948028"], ["id", 2]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 276ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-12 19:11:18 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 130ms (Views: 126.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-12 19:11:19 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.64ms)
+Completed 200 OK in 52ms (Views: 39.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 19:11:22 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (5.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (7.17ms)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/api/v1/races/1/teams" for 127.0.0.1 at 2018-05-12 19:11:33 -0400
+Processing by Api::V1::TeamsController#create as JSON
+  Parameters: {"newTeamName"=>"Name", "newTeamMotto"=>"Motto", "race_id"=>"1", "team"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[36mRace Load (0.4ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[36mRegistration Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "registrations" WHERE "registrations"."race_id" = $1 AND "registrations"."user_id" = $2 LIMIT $3[0m  [["race_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[36mRegistration Create (1.8ms)[0m  [1m[32mINSERT INTO "registrations" ("user_id", "race_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["race_id", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/teams_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/teams_controller.rb:11
+  [1m[36mRace Load (1.0ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:11
+  [1m[36mTeam Create (0.8ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Name"], ["motto", "Motto"], ["race_id", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/teams_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/teams_controller.rb:17
+  [1m[36mRoster Exists (13.4ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 11], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/teams_controller.rb:17
+  [1m[36mRoster Create (1.3ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["team_id", 11]]
+  ↳ app/controllers/api/v1/teams_controller.rb:17
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/teams_controller.rb:17
+No template found for Api::V1::TeamsController#create, rendering head :no_content
+Completed 204 No Content in 8128ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/api/v1/races/1/registrations" for 127.0.0.1 at 2018-05-12 19:13:44 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"api/v1/races/1/registrations"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:28
+Completed 200 OK in 114ms (Views: 103.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 19:13:48 -0400
+Processing by Api::V1::RacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (96.47ms)
+Completed 200 OK in 128ms (Views: 89.6ms | ActiveRecord: 21.1ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoster Load (1.2ms)[0m  [1m[34mSELECT "rosters".* FROM "rosters"[0m
+  [1m[36mRegistration Load (1.0ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m

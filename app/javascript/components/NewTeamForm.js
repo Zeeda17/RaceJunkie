@@ -1,18 +1,16 @@
 import React from 'react';
 
 const NewTeamForm = props => {
-  console.log("NewTeamForm")
   return(
     <form>
       <label>
-        Name:
-        <input type="text" name="name" />
+        Team Name:
+        <input type="text" name="name" onChange={props.newTeamNameChange} />
       </label>
       <label>
-        Motto:
-        <input type="text" name="motto" />
+        Team Motto:
+        <input type="text" name="motto" onChange={props.newTeamMottoChange} />
       </label>
-      <input type="submit" value="Submit" />
     </form>
   )
 }
