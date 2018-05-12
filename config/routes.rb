@@ -3,11 +3,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :races, only: [:index, :show, :create] do
-        resources :registrations, only: [:index, :show, :create]
+      resources :races, only: [:index, :show] do
+        resources :registrations, only: [:create]
       end
     end
   end
+
+  resources :races, only: [:index, :new, :create]
 
   get '*path' => 'homes#index'
 

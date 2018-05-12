@@ -16,10 +16,6 @@ class Api::V1::RegistrationsController < ApplicationController
 
   end
 
-  def new
-    binding.pry
-  end
-
   private
 
   def registration_params

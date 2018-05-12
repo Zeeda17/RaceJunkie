@@ -1,0 +1,28 @@
+<h2>Create a new Race</h2>
+
+<%= form_for(@race) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :distance %><br />
+    <%= f.text_field :distance,  autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price,  autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create Race" %>
+  </div>
+<% end %>

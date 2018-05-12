@@ -27,7 +27,7 @@ class RacePage extends Component {
 
   handleRegistrationSubmit(){
     let payload =  {joinTeam: this.state.joinTeam}
-    
+
     fetch(`/api/v1/races/${this.props.params.id}/registrations`, {
       credentials: 'same-origin',
       method: 'POST',
@@ -156,7 +156,8 @@ class RacePage extends Component {
             <option key={team.id} value={team.id}>{team.name}</option>
           )
         });
-        teams.unshift(<option key='0' value="0">I'm running solo</option>);
+        teams.unshift(<option key='0' value="0">-I'm running solo</option>);
+        teams.push(<option key='-1' value="-1">-I want to make a new team</option>);
 
         return(
           <div className='join-team'>
