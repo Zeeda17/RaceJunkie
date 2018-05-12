@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2018_05_10_221524) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name", null: false
-    t.string "moto"
+    t.string "motto"
     t.bigint "race_id", null: false
     t.index ["name", "race_id"], name: "index_teams_on_name_and_race_id", unique: true
     t.index ["race_id"], name: "index_teams_on_race_id"

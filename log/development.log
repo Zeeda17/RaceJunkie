@@ -28205,3 +28205,825 @@ Processing by Api::V1::RacesController#show as */*
 Completed 200 OK in 267ms (Views: 205.9ms | ActiveRecord: 57.3ms)
 
 
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:03:45 -0400
+Started GET "/races/new" for 127.0.0.1 at 2018-05-12 17:03:45 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13960ms (Views: 13948.9ms | ActiveRecord: 0.0ms)
+
+
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.6ms)
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:04:00 -0400
+Completed 200 OK in 764ms (Views: 645.0ms | ActiveRecord: 73.6ms)
+
+
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (201.6ms)
+Completed 200 OK in 213ms (Views: 180.1ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:04:04 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 98ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:04:04 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (150.72ms)
+Completed 200 OK in 184ms (Views: 115.2ms | ActiveRecord: 39.9ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-12 17:04:05 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 90ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:04:06 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 85ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:04:07 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (205.17ms)
+Completed 200 OK in 294ms (Views: 187.2ms | ActiveRecord: 81.7ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:04:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 179ms (Views: 173.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-12 17:04:34 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (8.4ms)
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:04:34 -0400
+Completed 200 OK in 357ms (Views: 309.8ms | ActiveRecord: 13.7ms)
+
+
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (3.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (3.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (315.31ms)
+Completed 200 OK in 483ms (Views: 411.1ms | ActiveRecord: 66.5ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:12:15 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 105ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-12 17:12:16 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.4ms)
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:12:16 -0400
+Completed 200 OK in 260ms (Views: 220.0ms | ActiveRecord: 19.0ms)
+
+
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.4ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (196.53ms)
+Completed 200 OK in 211ms (Views: 168.9ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:14:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+Started GET "/races/new" for 127.0.0.1 at 2018-05-12 17:14:02 -0400
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 88ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 222ms (Views: 153.9ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:14:02 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.8ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (411.23ms)
+Completed 200 OK in 420ms (Views: 391.5ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:14:38 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:14:39 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (8.26ms)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:15:01 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 92ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:15:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 124ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-12 17:15:02 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 472ms (Views: 376.6ms | ActiveRecord: 37.6ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:15:03 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.0ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (3.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (367.72ms)
+Completed 200 OK in 451ms (Views: 358.3ms | ActiveRecord: 88.3ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:15:28 -0400
+Processing by Api::V1::RacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", moto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (8.72ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 2.4ms)
+
+
+  [1m[35m (15.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (18.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (373.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "currerace_development"[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (297.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "currerace_test"[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (561.8ms)[0m  [1m[35mCREATE DATABASE "currerace_development" ENCODING = 'unicode'[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (525.0ms)[0m  [1m[35mCREATE DATABASE "currerace_test" ENCODING = 'unicode'[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3278783174586313065)[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+Migrating to DeviseCreateUsers (20180426221820)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (26.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "bio" text, "zip_code" character varying, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180426221820_devise_create_users.rb:5
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180426221820_devise_create_users.rb:44
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180426221820_devise_create_users.rb:45
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180426221820"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+Migrating to CreateRacesTable (20180506025537)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (24.9ms)[0m  [1m[35mCREATE TABLE "races" ("id" bigserial primary key, "distance" character varying NOT NULL, "name" character varying NOT NULL, "description" character varying NOT NULL, "price" integer)[0m
+  ↳ db/migrate/20180506025537_create_races_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180506025537"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+Migrating to RegistrationTable (20180508190157)
+  [1m[35m (92.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "registrations" ("id" bigserial primary key, "user_id" bigint NOT NULL, "race_id" bigint NOT NULL)[0m
+  ↳ db/migrate/20180508190157_registration_table.rb:3
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX  "index_registrations_on_user_id" ON "registrations"  ("user_id")[0m
+  ↳ db/migrate/20180508190157_registration_table.rb:3
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_registrations_on_race_id" ON "registrations"  ("race_id")[0m
+  ↳ db/migrate/20180508190157_registration_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508190157"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+Migrating to UniqueRegistration (20180508193026)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_registrations_on_user_id_and_race_id" ON "registrations"  ("user_id", "race_id")[0m
+  ↳ db/migrate/20180508193026_unique_registration.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508193026"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+Migrating to CreateTeamsTable (20180509232946)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE "teams" ("id" bigserial primary key, "name" character varying NOT NULL, "motto" character varying, "race_id" bigint NOT NULL)[0m
+  ↳ db/migrate/20180509232946_create_teams_table.rb:3
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_race_id" ON "teams"  ("race_id")[0m
+  ↳ db/migrate/20180509232946_create_teams_table.rb:3
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_teams_on_name_and_race_id" ON "teams"  ("name", "race_id")[0m
+  ↳ db/migrate/20180509232946_create_teams_table.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180509232946"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+Migrating to CreateRoster (20180510221524)
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "rosters" ("id" bigserial primary key, "user_id" bigint, "team_id" bigint)[0m
+  ↳ db/migrate/20180510221524_create_roster.rb:3
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE  INDEX  "index_rosters_on_user_id" ON "rosters"  ("user_id")[0m
+  ↳ db/migrate/20180510221524_create_roster.rb:3
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_rosters_on_team_id" ON "rosters"  ("team_id")[0m
+  ↳ db/migrate/20180510221524_create_roster.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180510221524"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-12 21:21:03.024911"], ["updated_at", "2018-05-12 21:21:03.024911"]]
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3278783174586313065)[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/bin/rake:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@fakeemail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "bio", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Larry"], ["last_name", "Looker"], ["bio", "I founded this site as a cover for finding my ex-girlfriend. She was very hairy."], ["email", "test@fakeemail.com"], ["encrypted_password", "$2a$11$Xp49uVgVIqNA2SXQBQVSU.BhG.hU5vsIqDTlcvHepf6bw.XUx5y/O"], ["created_at", "2018-05-12 21:21:06.675041"], ["updated_at", "2018-05-12 21:21:06.675041"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "evan@aol.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Evan"], ["last_name", "duBois"], ["email", "evan@aol.com"], ["encrypted_password", "$2a$11$9rIoO8RogYIHDFG8BuFux.LMU44jub7YV086YFZ33TLFyP2UsOXKG"], ["created_at", "2018-05-12 21:21:06.836321"], ["updated_at", "2018-05-12 21:21:06.836321"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mRace Create (1.0ms)[0m  [1m[32mINSERT INTO "races" ("distance", "name", "description", "price") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["distance", "5k"], ["name", "Puppy Race"], ["description", "Puppies everywhere. Do I really need to say more?"], ["price", 45]]
+  ↳ db/seeds.rb:28
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mRace Create (0.6ms)[0m  [1m[32mINSERT INTO "races" ("distance", "name", "description", "price") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["distance", "20k"], ["name", "Dino Race"], ["description", "You may get eaten, enter at your own risk!"], ["price", 5]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mRace Create (0.6ms)[0m  [1m[32mINSERT INTO "races" ("distance", "name", "description", "price") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["distance", "1k"], ["name", "Dance Race"], ["description", "It's not how fast you cross the finish line but how good you look doing it."], ["price", 20]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mRace Create (0.5ms)[0m  [1m[32mINSERT INTO "races" ("distance", "name", "description", "price") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["distance", "5k"], ["name", "Jackson Jump"], ["description", "Weirldly doesn't have any jumping."], ["price", 100]]
+  ↳ db/seeds.rb:49
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mRace Create (0.5ms)[0m  [1m[32mINSERT INTO "races" ("distance", "name", "description", "price") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["distance", "3k"], ["name", "Ruckus Race"], ["description", "Hosted by Rick Ruckus."], ["price", 45]]
+  ↳ db/seeds.rb:56
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:63
+  [1m[36mRace Load (1.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:63
+  [1m[36mRegistration Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "registrations" WHERE "registrations"."race_id" = $1 AND "registrations"."user_id" = $2 LIMIT $3[0m  [["race_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:63
+  [1m[36mRegistration Create (1.3ms)[0m  [1m[32mINSERT INTO "registrations" ("user_id", "race_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["race_id", 1]]
+  ↳ db/seeds.rb:63
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:68
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:68
+  [1m[36mRegistration Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "registrations" WHERE "registrations"."race_id" = $1 AND "registrations"."user_id" = $2 LIMIT $3[0m  [["race_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:68
+  [1m[36mRegistration Create (0.4ms)[0m  [1m[32mINSERT INTO "registrations" ("user_id", "race_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["race_id", 2]]
+  ↳ db/seeds.rb:68
+  [1m[35m (74.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:73
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:73
+  [1m[36mRegistration Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "registrations" WHERE "registrations"."race_id" = $1 AND "registrations"."user_id" = $2 LIMIT $3[0m  [["race_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:73
+  [1m[36mRegistration Create (0.5ms)[0m  [1m[32mINSERT INTO "registrations" ("user_id", "race_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["race_id", 3]]
+  ↳ db/seeds.rb:73
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:78
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:78
+  [1m[36mRace Load (0.6ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:78
+  [1m[36mRegistration Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "registrations" WHERE "registrations"."race_id" = $1 AND "registrations"."user_id" = $2 LIMIT $3[0m  [["race_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:78
+  [1m[36mRegistration Create (0.7ms)[0m  [1m[32mINSERT INTO "registrations" ("user_id", "race_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["race_id", 4]]
+  ↳ db/seeds.rb:78
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:78
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mRegistration Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "registrations" WHERE "registrations"."race_id" = $1 AND "registrations"."user_id" = $2 LIMIT $3[0m  [["race_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mRegistration Create (0.6ms)[0m  [1m[32mINSERT INTO "registrations" ("user_id", "race_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["race_id", 5]]
+  ↳ db/seeds.rb:83
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:88
+  [1m[36mRace Load (0.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:88
+  [1m[36mTeam Create (1.7ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Puppy Punks"], ["motto", "Bad to the Bone"], ["race_id", 1]]
+  ↳ db/seeds.rb:88
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:88
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mRace Load (0.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:94
+  [1m[36mTeam Create (0.8ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drooling Dawgs"], ["motto", "What's up?"], ["race_id", 1]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:100
+  [1m[36mRace Load (0.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:100
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "DinoRoars!"], ["motto", "ROAR!"], ["race_id", 2]]
+  ↳ db/seeds.rb:100
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:100
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:106
+  [1m[36mRace Load (0.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Race"], ["motto", "Racing Dinos is our game"], ["race_id", 2]]
+  ↳ db/seeds.rb:106
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:106
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:112
+  [1m[36mRace Load (0.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:112
+  [1m[36mTeam Create (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Race"], ["motto", "Daning Racers"], ["race_id", 3]]
+  ↳ db/seeds.rb:112
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:112
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:118
+  [1m[36mRace Load (0.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:118
+  [1m[36mTeam Create (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dancing Daisies"], ["motto", "We will blow you away"], ["race_id", 3]]
+  ↳ db/seeds.rb:118
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:118
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:124
+  [1m[36mRace Load (0.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:124
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("name", "race_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Easy as 123"], ["race_id", 4]]
+  ↳ db/seeds.rb:124
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:124
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mRace Load (0.3ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:129
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("name", "race_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Want you back"], ["race_id", 4]]
+  ↳ db/seeds.rb:129
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mRace Load (0.4ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:134
+  [1m[36mTeam Create (0.7ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruckus Racers"], ["motto", "We Da Best"], ["race_id", 5]]
+  ↳ db/seeds.rb:134
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:140
+  [1m[36mRace Load (0.4ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:140
+  [1m[36mTeam Create (0.9ms)[0m  [1m[32mINSERT INTO "teams" ("name", "motto", "race_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Team Rocket"], ["motto", "Blasting off at the speed of light!"], ["race_id", 5]]
+  ↳ db/seeds.rb:140
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:140
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:146
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:146
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:146
+  [1m[36mRoster Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:146
+  [1m[36mRoster Create (1.7ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["team_id", 1]]
+  ↳ db/seeds.rb:146
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:146
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:151
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mRoster Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 3], ["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mRoster Create (0.4ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["team_id", 3]]
+  ↳ db/seeds.rb:151
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:151
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mRoster Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mRoster Create (0.4ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["team_id", 5]]
+  ↳ db/seeds.rb:156
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:161
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:161
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:161
+  [1m[36mRoster Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 7], ["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:161
+  [1m[36mRoster Create (0.5ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["team_id", 7]]
+  ↳ db/seeds.rb:161
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:161
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:166
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:166
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:166
+  [1m[36mRoster Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 9], ["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:166
+  [1m[36mRoster Create (0.6ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["team_id", 9]]
+  ↳ db/seeds.rb:166
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:166
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mRoster Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mRoster Create (0.5ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["team_id", 2]]
+  ↳ db/seeds.rb:171
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:176
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:176
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:176
+  [1m[36mRoster Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:176
+  [1m[36mRoster Create (0.7ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["team_id", 3]]
+  ↳ db/seeds.rb:176
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:176
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:181
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:181
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:181
+  [1m[36mRoster Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 6], ["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:181
+  [1m[36mRoster Create (0.5ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["team_id", 6]]
+  ↳ db/seeds.rb:181
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:181
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:186
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:186
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:186
+  [1m[36mRoster Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 8], ["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:186
+  [1m[36mRoster Create (0.6ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["team_id", 8]]
+  ↳ db/seeds.rb:186
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:186
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mRoster Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "rosters" WHERE "rosters"."team_id" = $1 AND "rosters"."user_id" = $2 LIMIT $3[0m  [["team_id", 10], ["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mRoster Create (0.5ms)[0m  [1m[32mINSERT INTO "rosters" ("user_id", "team_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["team_id", 10]]
+  ↳ db/seeds.rb:191
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:23:24 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/evand/.gem/ruby/2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 4620ms (Views: 4602.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:23:29 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (3.5ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (2.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (401.35ms)
+Completed 200 OK in 768ms (Views: 441.8ms | ActiveRecord: 259.9ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:25:03 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 216ms (Views: 210.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:25:04 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.0ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (246.64ms)
+Completed 200 OK in 506ms (Views: 184.6ms | ActiveRecord: 132.5ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:26:02 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 139ms (Views: 131.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:26:03 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (1.2ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (356.67ms)
+Completed 200 OK in 403ms (Views: 300.9ms | ActiveRecord: 75.7ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:45:50 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 191ms (Views: 183.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:48:36 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 105ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:48:37 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.9ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (293.23ms)
+Completed 200 OK in 539ms (Views: 270.3ms | ActiveRecord: 240.7ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:49:33 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 95ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:49:34 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (305.18ms)
+Completed 200 OK in 340ms (Views: 248.1ms | ActiveRecord: 72.4ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:49:59 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 143ms (Views: 137.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:49:59 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (7.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (360.63ms)
+Completed 200 OK in 403ms (Views: 202.4ms | ActiveRecord: 179.0ms)
+
+
+Started GET "/races/1" for 127.0.0.1 at 2018-05-12 17:50:18 -0400
+Processing by HomesController#index as HTML
+  Parameters: {"path"=>"races/1"}
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 114ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-12 17:50:19 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (2.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (308.71ms)
+Completed 200 OK in 435ms (Views: 275.3ms | ActiveRecord: 137.8ms)
+
+
