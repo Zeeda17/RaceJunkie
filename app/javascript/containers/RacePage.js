@@ -9,6 +9,7 @@ class RacePage extends Component {
     this.state = {
       race: {},
       selectedTeam: false,
+      joinTeam: '0',
       showRunners: false,
       register: false
     }
@@ -21,16 +22,18 @@ class RacePage extends Component {
     this.registerButtonLabel = this.registerButtonLabel.bind(this)
     this.registerHandleClick = this.registerHandleClick.bind(this)
     this.joinTeam = this.joinTeam.bind(this)
+    this.teamSelect = this.teamSelect.bind(this)
   }
 
   handleRegistrationSubmit(){
-    let payload = this.state.race
+    let payload =  {joinTeam: this.state.joinTeam}
+    
     fetch(`/api/v1/races/${this.props.params.id}/registrations`, {
       credentials: 'same-origin',
       method: 'POST',
       body: JSON.stringify(payload),
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
-    })//.then(response => response.json())
+    })
     .then(response => console.log(response))
   }
 
@@ -140,19 +143,24 @@ class RacePage extends Component {
     }
   }
 
+  teamSelect(event){
+    let teamID = event.target.value
+    this.setState({joinTeam: teamID});
+  }
+
   joinTeam(){
     if (this.state.register) {
       if (this.state.race.teams != null) {
         let teams = this.state.race.teams.map((team) =>{
           return(
-            <option key={team.id} value={team.name}>{team.name}</option>
+            <option key={team.id} value={team.id}>{team.name}</option>
           )
         });
-        teams.push(<option key="0" value="-I'm running solo-">I'm running solo</option>);
+        teams.unshift(<option key='0' value="0">I'm running solo</option>);
 
         return(
           <div className='join-team'>
-            <select>
+            <select onChange={this.teamSelect}>
               {teams}
             </select>
           </div>
