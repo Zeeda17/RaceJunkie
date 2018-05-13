@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_05_10_221524) do
     t.bigint "user_id"
     t.bigint "team_id"
     t.index ["team_id"], name: "index_rosters_on_team_id"
+    t.index ["user_id", "team_id"], name: "index_rosters_on_user_id_and_team_id", unique: true
     t.index ["user_id"], name: "index_rosters_on_user_id"
   end
 

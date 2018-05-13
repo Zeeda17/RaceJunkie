@@ -6,6 +6,7 @@ class Api::V1::TeamsController < ApplicationController
   end
 
   def create
+    binding.pry
     Registration.create!(race_id: params["race_id"], user: current_user)
     newTeam = Team.create!(
       name: params["newTeamName"],

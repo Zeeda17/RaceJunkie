@@ -159,10 +159,10 @@ class RacePage extends Component {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
     })
     .then(response => console.log(response))
-  //.then(response => response.json())
+    .then(response => response.json())
     .then(body => {
       this.setState({
-        race: this.state.race.concat(body),
+        race: this.state.race.teams.concat(body),
         joinTeam: '0',
         register: false,
         newTeamName: '',
@@ -245,7 +245,6 @@ class RacePage extends Component {
   }
 
   render(){
-
     return(
       <div>
         <div className="columns small-8 medium-7" id="left">
