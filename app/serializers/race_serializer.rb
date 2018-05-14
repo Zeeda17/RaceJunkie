@@ -1,5 +1,5 @@
 class RaceSerializer < ActiveModel::Serializer
-  attributes :id, :name, :distance, :description, :price, :formatted_users
+  attributes :id, :name, :distance, :description, :price, :street, :city, :state, :zipcode, :formatted_users
 
   has_many :teams
 

@@ -1,6 +1,7 @@
 import React from 'react';
 
 const RaceRegister = props => {
+  debugger
   return (
     <div>
       <div className='ready columns'><h4>{props.registerButtonTitle()}</h4></div>
@@ -13,3 +14,7 @@ const RaceRegister = props => {
 }
 
 export default RaceRegister;
+
+
+// https://maps.googleapis.com/maps/api/staticmap?parameters
+// https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400&key=

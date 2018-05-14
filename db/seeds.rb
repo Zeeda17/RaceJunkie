@@ -25,39 +25,79 @@ User.create!(
   email: "Evan@aol.com"
 )
 
+User.create!(
+  email: "bob@aol.com",
+  password: "password",
+  password_confirmation: "password",
+  first_name: "Bob",
+  last_name: "Builder",
+  bio: "Can we do it? Yes we can!"
+)
+
 Race.create!(
   name: "Puppy Race",
   price: 45,
   distance: "5k",
-  description: "Puppies everywhere. Do I really need to say more?"
+  description: "Puppies everywhere. Do I really need to say more?",
+  street: "4 Yawkey Way",
+  city: "Boston",
+  state: "MA",
+  zipcode: "02215"
 )
 
 Race.create!(
   name: "Dino Race",
   price: 5,
   distance: "20k",
-  description: "You may get eaten, enter at your own risk!"
+  description: "You may get eaten, enter at your own risk!",
+  street: "600 King Philip Trail",
+  city: "Baldwinville",
+  state: "MA",
+  zipcode: "01436"
 )
 
 Race.create!(
   name: "Dance Race",
   price: 20,
   distance: "1k",
-  description: "It's not how fast you cross the finish line but how good you look doing it."
+  description: "It's not how fast you cross the finish line but how good you look doing it.",
+  street: "224 Plymouth St",
+  city: "Carver",
+  state: "MA",
+  zipcode:"02330"
 )
 
 Race.create!(
   name: "Jackson Jump",
   price: 100,
   distance: "5k",
-  description: "Weirldly doesn't have any jumping."
+  description: "Weirldly doesn't have any jumping.",
+  street: "280 Exeter Rd",
+  city: "Epping",
+  state: "NH",
+  zipcode: "03042"
 )
 
 Race.create!(
   name: "Ruckus Race",
   price: 45,
   distance: "3k",
-  description: "Hosted by Rick Ruckus."
+  description: "Hosted by Rick Ruckus.",
+  street: "93 Jolly Roger Rd",
+  city: "Lempster",
+  state: "NH",
+  zipcode: "03605"
+)
+
+Race.create!(
+  name: "Beer-drink-a-thon",
+  price: 50,
+  distance: "0k",
+  description: "Not really a race, just an excuse to drink beer.",
+  street: "27 Francis Farm Road",
+  city: "Rehoboth",
+  state: "MA",
+  zipcode: "02769"
 )
 
 Registration.create!(
