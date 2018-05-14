@@ -18,6 +18,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :description %><br />
+    <%= f.number_field :description,  autocomplete: "off" %>
+  </div>
+
+  <div class="field">
     <%= f.label :street %><br />
     <%= f.text_field :street, autocomplete: "off" %>
   </div>
