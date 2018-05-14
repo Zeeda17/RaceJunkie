@@ -34,12 +34,13 @@ ActiveRecord::Schema.define(version: 2018_05_10_221524) do
     t.bigint "user_id"
     t.bigint "team_id"
     t.index ["team_id"], name: "index_rosters_on_team_id"
+    t.index ["user_id", "team_id"], name: "index_rosters_on_user_id_and_team_id", unique: true
     t.index ["user_id"], name: "index_rosters_on_user_id"
   end
 
   create_table "teams", force: :cascade do |t|
     t.string "name", null: false
-    t.string "moto"
+    t.string "motto"
     t.bigint "race_id", null: false
     t.index ["name", "race_id"], name: "index_teams_on_name_and_race_id", unique: true
     t.index ["race_id"], name: "index_teams_on_race_id"

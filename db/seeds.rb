@@ -87,37 +87,37 @@ Registration.create!(
 
 Team.create!(
   name: "Puppy Punks",
-  moto: "Bad to the Bone",
+  motto: "Bad to the Bone",
   race_id: 1
 )
 
 Team.create!(
   name: "Drooling Dawgs",
-  moto: "What's up?",
+  motto: "What's up?",
   race_id: 1
 )
 
 Team.create!(
   name: "DinoRoars!",
-  moto: "ROAR!",
+  motto: "ROAR!",
   race_id: 2
 )
 
 Team.create!(
   name: "Race",
-  moto: "Racing Dinos is our game",
+  motto: "Racing Dinos is our game",
   race_id: 2
 )
 
 Team.create!(
   name: "Race",
-  moto: "Daning Racers",
+  motto: "Daning Racers",
   race_id: 3
 )
 
 Team.create!(
   name: "Dancing Daisies",
-  moto: "We will blow you away",
+  motto: "We will blow you away",
   race_id: 3
 )
 
@@ -133,13 +133,13 @@ Team.create!(
 
 Team.create!(
   name: "Ruckus Racers",
-  moto: "We Da Best",
+  motto: "We Da Best",
   race_id: 5
 )
 
 Team.create!(
   name: "Team Rocket",
-  moto: "Blasting off at the speed of light!",
+  motto: "Blasting off at the speed of light!",
   race_id: 5
 )
 

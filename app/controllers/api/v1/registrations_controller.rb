@@ -11,13 +11,9 @@ class Api::V1::RegistrationsController < ApplicationController
 
   def create
     Registration.create!(race_id: params["race_id"], user: current_user)
-    Roster.create!(user: current_user, team_id: params["joinTeam"])
-    # binding.pry
-
-  end
-
-  def new
-    binding.pry
+    if params["joinTeam"] != '0'
+      Roster.create!(user: current_user, team_id: params["joinTeam"])
+    end
   end
 
   private
