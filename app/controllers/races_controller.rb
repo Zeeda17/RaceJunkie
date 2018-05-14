@@ -23,6 +23,6 @@ class RacesController < ApplicationController
 private
 
   def race_params
-    params.require(:race).permit(:name, :distance, :price, :description)
+    params.require(:race).permit(:name, :distance, :price, :description, :street, :city, :state, :zipcode)
   end
 end

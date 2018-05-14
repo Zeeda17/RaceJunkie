@@ -265,6 +265,7 @@ class RacePage extends Component {
         <div className="columns small-4 medium-5" id="right">
           <div className="map-registration">
             <RaceRegister
+              race={this.state.race}
               registerButtonLabel={this.registerButtonLabel}
               showNewTeamForm={this.showNewTeamForm}
               registerHandleClick={this.registerHandleClick}
