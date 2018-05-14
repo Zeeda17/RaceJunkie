@@ -11,9 +11,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from '../App'
 
-// if (process.env.NODE_ENV === 'production') { ... }
-// app.listen(process.env.REACT_APP_PORT);
-
 let element = document.getElementById('app');
 
 if (element) {

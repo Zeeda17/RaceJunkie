@@ -90,10 +90,23 @@ Race.create!(
 )
 
 Race.create!(
-  name: "Beer-drink-a-thon",
+  name: "Bog Iron",
   price: 50,
   distance: "0k",
-  description: "Not really a race, just an excuse to drink beer.",
+  description: `Welcome to the 5th Annual Bog Iron Brewing 0.0K Road Race!!
+
+This year's race will be held at Francis Farm, Ma on Sunday, June 3rd from noon until 5:00pm
+
+Registration for this year's race will be $45 per person.  With registration each runner will receive: an official race t-shirt with an optional, custom team name of your choosing on the back
+an official race numbered bibs
+first place medals for anyone who wins
+discounted pints (Bog Iron, Black Hat, 10th District, and Shoveltown pouring... so far)
+live music
+free barbeque (burgers, dogs, etc.)
+a ton of fun
+Please know that 100% of entry fees, after the purchase of the t-shirts, bibs, and medals, will be going to the Joe Andruzzi Foundation which supports families fighting cancer.
+
+Teams can be one person... or as many as you want.  Dressing up appropriately for the day to show your runner spirit is encouraged!   Simply tell all members of your team to register under the same team name and we'll order all t-shirts appropriately.  `,
   street: "27 Francis Farm Road",
   city: "Rehoboth",
   state: "MA",
