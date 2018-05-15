@@ -5,9 +5,11 @@ class FrontPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      races: []
+      races: [],
+      featuredRace: []
     };
     this.raceChecker = this.raceChecker.bind(this);
+    this.featuredRace = this.featuredRace.bind(this)
   }
 
   componentDidMount(){
@@ -23,9 +25,28 @@ class FrontPage extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({ races: body })
+      let featuredHolder = body.splice(Math.floor(Math.random()*body.length), 1)
+      this.setState({
+        races: body,
+        featuredRace: featuredHolder[0]
+       })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  featuredRace(){
+    if (this.state.featuredRace.length != 0) {
+
+        return(
+          <div className='featured-race'>
+            <RaceTile
+              race={this.state.featuredRace}
+            />
+          </div>
+        )
+    } else {
+      return null;
+    }
   }
 
   raceChecker(){
@@ -34,7 +55,6 @@ class FrontPage extends Component {
         return(
           <div key={race.id} className='race-tile'>
             <RaceTile
-
               race={race}
             />
           </div>
@@ -47,8 +67,12 @@ class FrontPage extends Component {
   }
 
   render(){
+
     return(
       <div>
+        <h1 className='featured-race-title'>Featured Race</h1>
+        {this.featuredRace()}
+        <h2 className='upcoming-races-title'>Upcoming Races</h2>
         {this.raceChecker()}
       </div>
     )

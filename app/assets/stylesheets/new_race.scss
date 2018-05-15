@@ -1,7 +1,7 @@
 @import 'defaults/colors';
 
 .new_race{
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
@@ -36,6 +36,18 @@
 
 .new-race-submit{
   background: $redish;
-  margin: auto;
+  margin-left: 45%;
+  padding: 15px;
   text-align: center;
+  font-size: 18px;
+}
+
+.sign-up-email{
+  margin-left: 15%;
+  margin-right: 15%;
+  width: auto;
+}
+
+.sign-up-sign-up-field{
+  margin: 0 10em;
 }
