@@ -1,9 +1,14 @@
 @import 'defaults/colors';
 
+.display-teams{
+  background-color: $redish;
+  // border-radius: 1em;
+  // width: 400px;
+}
+
 .race-breakdown{
   text-align: center;
   margin: 5em auto;
-  background-color: $blueish;
   width: 75%;
   border-radius: 0.3em;
 }
@@ -12,22 +17,23 @@
   text-align: center;
   background-color: $blueish;
   border-radius: 0.3em 0.3em 0 0;
+  margin-bottom: -0.5em;
 }
 
 .race-breakdown-info{
   text-align: center;
-  background-color: $redish;
+  background-color: $transparent-blueish;
   border-radius: 0 0 0.3em 0.3em;
 }
 
 #right{
   float: right;
   padding: 5em;
+  padding-left: 3em
 }
 
 #left{
   float: left;
-  padding-bottom: 200%;
   padding-left: 5em;
 }
 .test-find{
@@ -46,13 +52,14 @@
 }
 
 .map-registration{
-  padding-left: 10em;
+  padding-left: 7em;
   position: fixed;
 }
 
 .RaceRegister{
   background-color: $redish;
   border-radius: 1em;
+  width: 400px;
 }
 
 .ready{
