@@ -37648,3 +37648,678 @@ Processing by Api::V1::RacesController#show as */*
 Completed 200 OK in 496ms (Views: 328.4ms | ActiveRecord: 129.4ms)
 
 
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:46:03 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 13600ms (Views: 13593.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:49:24 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 377ms (Views: 373.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:49:40 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 213ms (Views: 209.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:50:58 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 285ms (Views: 281.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:51:02 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 188ms (Views: 185.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:51:59 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 217ms (Views: 213.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:52:09 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 282ms (Views: 277.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:53:41 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 172ms (Views: 169.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:53:48 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 173ms (Views: 170.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:54:11 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 357ms (Views: 353.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:54:16 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 11:54:57 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 90ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:03:58 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 177ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:04:53 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 277ms (Views: 259.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:05:05 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 233ms (Views: 228.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:06:32 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 233ms (Views: 228.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:07:37 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:09:13 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 273ms (Views: 269.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:09:53 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 173ms (Views: 169.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:10:35 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 195ms (Views: 190.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:10:56 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 249ms (Views: 246.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:21:54 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 288ms (Views: 284.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:22:04 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 256ms (Views: 252.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:22:31 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 255ms (Views: 252.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 12:52:17 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 278ms (Views: 272.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-15 12:52:18 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.4ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mTeam Load (1.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers]   [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 6]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (66.03ms)
+Completed 200 OK in 72ms (Views: 50.2ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 12:52:23 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 255ms (Views: 251.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-15 12:52:24 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (45.2ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 6]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (53.65ms)
+Completed 200 OK in 103ms (Views: 50.7ms | ActiveRecord: 51.8ms)
+
+
+Started GET "/api/v1/races/1" for 127.0.0.1 at 2018-05-15 12:52:31 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (8.96ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:53:28 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 236ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:53:38 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 298ms (Views: 293.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:53:41 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 99ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:54:30 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 281ms (Views: 277.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:55:07 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 304ms (Views: 300.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:55:15 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 180ms (Views: 177.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:55:32 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 239ms (Views: 236.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 12:55:43 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 285ms (Views: 281.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:00:09 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 257ms (Views: 254.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:02:53 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 278ms (Views: 275.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:03:24 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 246ms (Views: 242.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:03:33 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 206ms (Views: 202.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:03:43 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 231ms (Views: 228.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:05:02 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 289ms (Views: 286.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:06:38 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (513.1ms)
+Completed 500 Internal Server Error in 531ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `textarea' for #<ActionView::Helpers::FormBuilder:0x007ff7830f5118>
+Did you mean?  text_area):
+    24: 
+    25:     <div class="field">
+    26:       <%= f.label :description %><br />
+    27:       <%= f.textarea :description,  autocomplete: "off" %>
+    28:     </div>
+    29: 
+    30:     <div class="field">
+  
+app/views/races/new.html.erb:27:in `block in _app_views_races_new_html_erb__2904530214623186913_70350305953980'
+app/views/races/new.html.erb:4:in `_app_views_races_new_html_erb__2904530214623186913_70350305953980'
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:06:46 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 155ms (Views: 150.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/races" for 127.0.0.1 at 2018-05-15 13:09:53 -0400
+Processing by RacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcuPZZjIQ5h4EPtl+B+AJL7UCivbIMBTZcbLoXpDHU1/G55W457w96ki8kKmzTSi0UouiQAoKPEPheuRNoO5wQ==", "race"=>{"name"=>"", "distance"=>"", "price"=>"", "description"=>"test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test ", "street"=>"", "city"=>"", "state"=>"", "zipcode"=>""}, "commit"=>"Create Race"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/races_controller.rb:14
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/races_controller.rb:14
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 85ms (Views: 74.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/races" for 127.0.0.1 at 2018-05-15 13:10:19 -0400
+Processing by RacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cBDK6aHrW1ZB5W2UWP61stHemx8CVl1gFjWP4MKj83OOwNva2r3oOZDXZLMGLAE0vkC/vdletcJ8dq/QjmNX/w==", "race"=>{"name"=>"test test test test test ", "distance"=>"100k", "price"=>"120", "description"=>"test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test ", "street"=>"77 Summer st", "city"=>"Boston", "state"=>"MA", "zipcode"=>""}, "commit"=>"Create Race"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/races_controller.rb:14
+  [1m[36mRace Create (3.7ms)[0m  [1m[32mINSERT INTO "races" ("distance", "name", "description", "price", "street", "city", "state", "zipcode") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["distance", "100k"], ["name", "test test test test test "], ["description", "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test "], ["price", 120], ["street", "77 Summer st"], ["city", "Boston"], ["state", "MA"], ["zipcode", ""]]
+  ↳ app/controllers/races_controller.rb:14
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/races_controller.rb:14
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-15 13:10:19 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 82ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/races" for 127.0.0.1 at 2018-05-15 13:10:20 -0400
+Processing by Api::V1::RacesController#index as */*
+  [1m[36mRace Load (1.4ms)[0m  [1m[34mSELECT "races".* FROM "races"[0m
+  ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mTeam Load (4.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers]   [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:5
+[active_model_serializers]   [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 1]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 1, name: "Puppy Punks", motto: "Bad to the Bone", race_id: 1>
+[active_model_serializers]   [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 2]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 3, name: "DinoRoars!", motto: "ROAR!", race_id: 2>
+[active_model_serializers]   [1m[36mUser Load (112.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 3]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 5, name: "Race", motto: "Daning Racers", race_id: 3>
+[active_model_serializers]   [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 4]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 7, name: "Easy as 123", motto: nil, race_id: 4>
+[active_model_serializers]   [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 5]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] No serializer found for resource: #<Team id: 9, name: "Ruckus Racers", motto: "We Da Best", race_id: 5>
+[active_model_serializers]   [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 6]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 7]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (246.76ms)
+Completed 200 OK in 253ms (Views: 115.6ms | ActiveRecord: 136.5ms)
+
+
+Started GET "/api/v1/races/7" for 127.0.0.1 at 2018-05-15 13:10:23 -0400
+Processing by Api::V1::RacesController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mRace Load (0.7ms)[0m  [1m[34mSELECT  "races".* FROM "races" WHERE "races"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."race_id" = $1[0m  [["race_id", 7]]
+[active_model_serializers]   ↳ app/serializers/race_serializer.rb:8
+[active_model_serializers]   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."race_id" = $1[0m  [["race_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/races_controller.rb:9
+[active_model_serializers] Rendered RaceSerializer with ActiveModelSerializers::Adapter::Attributes (6.2ms)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:10:29 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 82ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:10:47 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:11:27 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 86ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:13:33 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 159ms (Views: 156.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:13:42 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 177ms (Views: 174.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:13:56 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 104ms (Views: 100.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:18:29 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:24:49 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 304ms (Views: 302.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:26:15 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 111ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:27:07 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:27:21 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 104ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:31:56 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 0..2)):
+    52: 
+    53: 
+    54:     <div class="actions">
+    55:       <%= f.submit "Create Race", 'Create Race', :class => 'new-race-submit' %>
+    56:     </div>
+    57:   <% end %>
+    58: </div>
+  
+app/views/races/new.html.erb:55:in `block in _app_views_races_new_html_erb__2904530214623186913_70350509659920'
+app/views/races/new.html.erb:4:in `_app_views_races_new_html_erb__2904530214623186913_70350509659920'
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:32:34 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 346ms (Views: 341.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:35:54 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 351ms (Views: 345.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/races" for 127.0.0.1 at 2018-05-15 13:35:57 -0400
+Processing by RacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g9wYi4MGYq2HiWn/d3Om4UDL40duHhenluItzJRmVqt9DAm4+FDRwla7YNgpoRJnL1XH5bUW/wX8oQ382KbyJw==", "race"=>{"name"=>"", "distance"=>"", "price"=>"", "description"=>"", "street"=>"", "city"=>"", "state"=>"", "zipcode"=>""}, "commit"=>"Create Race"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/races_controller.rb:14
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/races_controller.rb:14
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 126ms (Views: 113.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/races" for 127.0.0.1 at 2018-05-15 13:36:13 -0400
+Processing by RacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g9wYi4MGYq2HiWn/d3Om4UDL40duHhenluItzJRmVqt9DAm4+FDRwla7YNgpoRJnL1XH5bUW/wX8oQ382KbyJw==", "race"=>{"name"=>"", "distance"=>"", "price"=>"", "description"=>"", "street"=>"", "city"=>"", "state"=>"", "zipcode"=>""}, "commit"=>"Create Race"}
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/races_controller.rb:14
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/races_controller.rb:14
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 283ms (Views: 269.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/races" for 127.0.0.1 at 2018-05-15 13:36:53 -0400
+Processing by RacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g9wYi4MGYq2HiWn/d3Om4UDL40duHhenluItzJRmVqt9DAm4+FDRwla7YNgpoRJnL1XH5bUW/wX8oQ382KbyJw==", "race"=>{"name"=>"", "distance"=>"", "price"=>"", "description"=>"", "street"=>"", "city"=>"", "state"=>"", "zipcode"=>""}, "commit"=>"Create Race"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/races_controller.rb:14
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/races_controller.rb:14
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 121ms (Views: 112.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/races" for 127.0.0.1 at 2018-05-15 13:37:27 -0400
+Processing by RacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g9wYi4MGYq2HiWn/d3Om4UDL40duHhenluItzJRmVqt9DAm4+FDRwla7YNgpoRJnL1XH5bUW/wX8oQ382KbyJw==", "race"=>{"name"=>"", "distance"=>"", "price"=>"", "description"=>"", "street"=>"", "city"=>"", "state"=>"", "zipcode"=>""}, "commit"=>"Create Race"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/races_controller.rb:14
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/races_controller.rb:14
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 298ms (Views: 284.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/races" for 127.0.0.1 at 2018-05-15 13:37:33 -0400
+Processing by RacesController#index as HTML
+  Rendering races/index.html.erb within layouts/application
+  Rendered races/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 230ms (Views: 226.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:37:37 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 189ms (Views: 185.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/races/new" for 127.0.0.1 at 2018-05-15 13:39:08 -0400
+Processing by RacesController#new as HTML
+  Rendering races/new.html.erb within layouts/application
+  Rendered races/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 318ms (Views: 315.8ms | ActiveRecord: 0.0ms)
+
+

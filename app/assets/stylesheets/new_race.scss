@@ -1,0 +1,41 @@
+@import 'defaults/colors';
+
+.new_race{
+  width: 90%;
+  margin: auto;
+}
+
+.new-race-box{
+  background-color: $transparent-blueish;
+  margin: 2em auto;
+  width: 60%;
+}
+
+.new-race-title{
+  margin: auto;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.field{
+  padding: .2em;
+}
+
+.form-left{
+  float: left;
+}
+
+.form-center{
+  align-self: center;
+}
+
+.form-right{
+  float: right;
+}
+
+.new-race-submit{
+  background: $redish;
+  margin: auto;
+  text-align: center;
+}
