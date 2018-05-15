@@ -9,19 +9,18 @@ class RacePage extends Component {
     super(props);
     this.state = {
       race: {},
-      selectedTeam: false,
+      showTeams: false,
+      selectedTeams: null,
       joinTeam: '0',
-      showRunners: false,
       register: false,
       newTeamName: '',
       newTeamMotto: ''
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
-    this.selectedTeam = this.selectedTeam.bind(this)
+    this.showTeams = this.showTeams.bind(this)
     this.teamHandleClick = this.teamHandleClick.bind(this)
     this.teamButtonLabel = this.teamButtonLabel.bind(this)
-    this.runnerHandleClick = this.runnerHandleClick.bind(this)
-    this.runnerButtonLabel = this.runnerButtonLabel.bind(this)
+    this.teamSelectClick = this.teamSelectClick.bind(this)
     this.registerButtonTitle = this.registerButtonTitle.bind(this)
     this.registerHandleClick = this.registerHandleClick.bind(this)
     this.joinTeam = this.joinTeam.bind(this)
@@ -45,33 +44,15 @@ class RacePage extends Component {
     .then(response => console.log(response))
   }
 
-  selectedTeam(){
+  showTeams(){
     if (this.state.race.teams == null) {
       return null;
-    } else if (this.state.selectedTeam) {
+    } else if (this.state.showTeams) {
         const allTeams = this.state.race.teams.map((team) =>{
           return(
             <div key={team.id}>
               <TeamTile
-                team={team}
-              />
-            </div>
-          )
-        })
-        return(allTeams)
-      } else {
-        return null;
-      }
-  }
-
-  showRunners(){
-    if (this.state.race.teams == null) {
-      return null;
-    } else if (this.state.selectedTeam) {
-        const allTeams = this.state.race.teams.map((team) =>{
-          return(
-            <div key={team.id}>
-              <TeamTile
+                teamSelectClick={this.teamSelectClick}
                 team={team}
               />
             </div>
@@ -104,7 +85,7 @@ class RacePage extends Component {
   }
 
   teamButtonLabel(){
-    if (this.state.selectedTeam){
+    if (this.state.showTeams){
       return "Hide Teams"
     } else {
       return "Show Teams"
@@ -112,26 +93,18 @@ class RacePage extends Component {
   }
 
   teamHandleClick(){
-    if (this.state.selectedTeam){
-      this.setState({selectedTeam: false})
+    if (this.state.showTeams){
+      this.setState({showTeams: false})
     } else {
-      this.setState({selectedTeam: true})
+      this.setState({showTeams: true})
     }
   }
 
-  runnerButtonLabel(){
-    if (this.state.showRunners){
-      return "Hide Runners"
+  teamSelectClick(id){
+    if (this.state.selectedTeams == id){
+      this.setState({selectedTeams: null})
     } else {
-      return "Show Runners"
-    }
-  }
-
-  runnerHandleClick(){
-    if (this.state.showRunners){
-      this.setState({showRunners: false})
-    } else {
-      this.setState({showRunners: true})
+      this.setState({selectedTeams: id})
     }
   }
 
@@ -245,19 +218,19 @@ class RacePage extends Component {
   }
 
   render(){
+    
     return(
       <div>
         <div className="columns small-8 medium-7" id="left">
           <div className="race-breakdown">
-            <div className='.race-breakdown-title'>
+            <div className='race-breakdown-title'>
               <h2>{this.state.race.name} - {this.state.race.distance}</h2>
               <h4>${this.state.race.price}</h4>
             </div>
             <div className='race-breakdown-info'>
               <p>{this.state.race.description}</p>
               <button className='display-teams' onClick={this.teamHandleClick} >{this.teamButtonLabel()}</button>
-              <button className='display-runners' onClick={this.runnerHandleClick} >{this.runnerButtonLabel()}</button>
-              {this.selectedTeam()}
+              {this.showTeams()}
             </div>
           </div>
         </div>

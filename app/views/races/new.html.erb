@@ -1,48 +1,58 @@
-<h2>Create a new Race</h2>
+<div class='new-race-box'>
+  <h2 class='new-race-title'>Create a new Race</h2>
 
-<%= form_for(@race) do |f| %>
+  <%= form_for(@race) do |f| %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "off" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :distance %><br />
-    <%= f.text_field :distance,  autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.number_field :price,  autocomplete: "off" %>
-  </div>
+    <div class='row'>
+      <div class="field column medium-5">
+        <%= f.label :distance %><br />
+        <%= f.text_field :distance,  autocomplete: "off" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.number_field :description,  autocomplete: "off" %>
-  </div>
+      <div class="field column medium-5">
+        <%= f.label :price %><br />
+        <%= f.number_field :price,  autocomplete: "off" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :street %><br />
-    <%= f.text_field :street, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <%= f.label :description %><br />
+      <%= f.text_area :description,  autocomplete: "off" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <%= f.label :street %><br />
+      <%= f.text_field :street, autocomplete: "off" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :zipcode %><br />
-    <%= f.text_field :zipcode, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Create Race" %>
-  </div>
-<% end %>
+    <div class='row'>
+      <div class="column medium-4 field shorten-third">
+        <%= f.label :city %><br />
+        <%= f.text_field :city, autocomplete: "off" %>
+      </div>
+
+      <div class="column medium-4 field shorten-third">
+        <%= f.label :state %><br />
+        <%= f.text_field :state, autocomplete: "off" %>
+      </div>
+
+      <div class="column medium-4 field shorten-third">
+        <%= f.label :zipcode %><br />
+        <%= f.text_field :zipcode, autocomplete: "off" %>
+      </div>
+    </div>
+
+
+    <div class="actions ">
+      <%= f.submit "Create Race", :class => 'new-race-submit' %>
+    </div>
+  <% end %>
+</div>

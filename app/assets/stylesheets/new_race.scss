@@ -1,0 +1,53 @@
+@import 'defaults/colors';
+
+.new_race{
+  width: 80%;
+  margin: auto;
+}
+
+.new-race-box{
+  background-color: $transparent-blueish;
+  margin: 2em auto;
+  width: 60%;
+}
+
+.new-race-title{
+  margin: auto;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.field{
+  padding: .2em;
+}
+
+.form-left{
+  float: left;
+}
+
+.form-center{
+  align-self: center;
+}
+
+.form-right{
+  float: right;
+}
+
+.new-race-submit{
+  background: $redish;
+  margin-left: 45%;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.sign-up-email{
+  margin-left: 15%;
+  margin-right: 15%;
+  width: auto;
+}
+
+.sign-up-sign-up-field{
+  margin: 0 10em;
+}
