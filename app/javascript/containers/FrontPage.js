@@ -97,8 +97,6 @@ class FrontPage extends Component {
           )
         })
       }
-
-      console.log(finalOutput);
     }
     return(
       <div className='search-results'>

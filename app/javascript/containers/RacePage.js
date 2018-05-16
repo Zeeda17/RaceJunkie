@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 import RaceTile from '../components/RaceTile'
 import RaceRegister from '../components/RaceRegister'
 import TeamTile from '../components/TeamTile'
 import NewTeamForm from '../components/NewTeamForm'
+import SearchBar from '../components/SearchBar'
 
 class RacePage extends Component {
   constructor(props) {
@@ -15,7 +17,8 @@ class RacePage extends Component {
       register: false,
       newTeamRegister: false,
       newTeamName: '',
-      newTeamMotto: ''
+      newTeamMotto: '',
+      searchInput: ''
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
     this.showTeams = this.showTeams.bind(this)
@@ -33,6 +36,9 @@ class RacePage extends Component {
 
     this.teamRegister = this.teamRegister.bind(this)
     this.newTeamRegister = this.newTeamRegister.bind(this)
+
+    this.searchResults = this.searchResults.bind(this)
+    this.searchChange = this.searchChange.bind(this)
   }
 
 
@@ -206,9 +212,6 @@ class RacePage extends Component {
     }
   }
 
-
-
-
   teamRegister(){
     if (this.state.joinTeam == null) {
       this.setState({joinTeam: this.state.race.teams[0].id});
@@ -229,25 +232,38 @@ class RacePage extends Component {
     }
   }
 
+  searchChange(event){
+    this.setState({searchInput: event.target.value})
+  }
 
+  searchResults(){
+    const searchText = this.state.searchInput.toLowerCase();
+    const currentTeams = this.state.race.teams;
+    let finalOutput = null;
+    let searchResults = [];
+    if (searchText) {
+      currentTeams.forEach((race) =>{
+        if (race.name.toLowerCase().search(searchText) != -1) {
+          searchResults.push(race)
+        }
+      })
 
+      if (searchResults.length != 0) {
+        finalOutput = searchResults.map((result) =>{
+          return(
+            <p key={result.id}><Link to={`/races/${result.id}`}>{result.name}</Link></p>
+          )
+        })
+      }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      console.log(finalOutput);
+    }
+    return(
+      <div className='search-results'>
+        {finalOutput}
+      </div>
+    )
+  }
 
   render(){
 
@@ -263,6 +279,10 @@ class RacePage extends Component {
               <p>{this.state.race.description}</p>
               <button className='display-teams' onClick={this.teamHandleClick} >{this.teamButtonLabel()}</button>
               {this.showTeams()}
+              <SearchBar
+                searchChange={this.searchChange}
+                searchResults={this.searchResults}
+              />
             </div>
           </div>
         </div>
