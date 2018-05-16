@@ -11,8 +11,9 @@ class RacePage extends Component {
       race: {},
       showTeams: false,
       selectedTeams: null,
-      joinTeam: '0',
+      joinTeam: null,
       register: false,
+      newTeamRegister: false,
       newTeamName: '',
       newTeamMotto: ''
     }
@@ -22,15 +23,19 @@ class RacePage extends Component {
     this.teamButtonLabel = this.teamButtonLabel.bind(this)
     this.teamSelectClick = this.teamSelectClick.bind(this)
     this.registerButtonTitle = this.registerButtonTitle.bind(this)
-    this.registerHandleClick = this.registerHandleClick.bind(this)
+    this.registerSoloHandleClick = this.registerSoloHandleClick.bind(this)
     this.joinTeam = this.joinTeam.bind(this)
     this.teamSelect = this.teamSelect.bind(this)
     this.newTeamSubmit = this.newTeamSubmit.bind(this)
     this.newTeamNameChange = this.newTeamNameChange.bind(this)
     this.newTeamMottoChange = this.newTeamMottoChange.bind(this)
     this.showNewTeamForm = this.showNewTeamForm.bind(this)
-    this.registerButtonLabel = this.registerButtonLabel.bind(this)
+
+    this.teamRegister = this.teamRegister.bind(this)
+    this.newTeamRegister = this.newTeamRegister.bind(this)
   }
+
+
 
   handleRegistrationSubmit(){
     let payload =  {joinTeam: this.state.joinTeam}
@@ -108,7 +113,7 @@ class RacePage extends Component {
     }
   }
 
-  registerHandleClick(){
+  registerSoloHandleClick(){
     if (this.state.register === false){
       this.setState({register: true})
     } else if (this.state.joinTeam == 'newTeam') {
@@ -132,11 +137,9 @@ class RacePage extends Component {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
     })
     .then(response => console.log(response))
-    .then(response => response.json())
     .then(body => {
       this.setState({
-        race: this.state.race.teams.concat(body),
-        joinTeam: '0',
+        joinTeam: null,
         register: false,
         newTeamName: '',
         newTeamMotto: ''
@@ -154,8 +157,6 @@ class RacePage extends Component {
     this.setState({newTeamMotto: event.target.value})
   }
 
-  newTeamMottoChange
-
   registerButtonTitle(){
     if (this.state.register == false){
       return "Ready to run?"
@@ -171,16 +172,26 @@ class RacePage extends Component {
     this.setState({joinTeam: teamID});
   }
 
+  showNewTeamForm(){
+    if (this.state.newTeamRegister == true) {
+      return(
+        <NewTeamForm
+          newTeamSubmit={this.newTeamSubmit}
+          newTeamNameChange={this.newTeamNameChange}
+          newTeamMottoChange={this.newTeamMottoChange}
+        />
+      )
+    }
+  }
+
   joinTeam(){
-    if (this.state.register) {
+    if (this.state.joinTeam) {
       if (this.state.race.teams != null) {
         let teams = this.state.race.teams.map((team) =>{
           return(
             <option key={team.id} value={team.id}>{team.name}</option>
           )
         });
-        teams.unshift(<option key='0' value="0">-I'm running solo</option>);
-        teams.push(<option key='newTeam' value="newTeam">-I want to make a new team</option>);
 
         return(
           <div className='join-team'>
@@ -195,30 +206,51 @@ class RacePage extends Component {
     }
   }
 
-  showNewTeamForm(){
-    if (this.state.joinTeam == 'newTeam') {
-      return(
-        <NewTeamForm
-          newTeamSubmit={this.newTeamSubmit}
-          newTeamNameChange={this.newTeamNameChange}
-          newTeamMottoChange={this.newTeamMottoChange}
-        />
-      )
+
+
+
+  teamRegister(){
+    if (this.state.joinTeam == null) {
+      this.setState({joinTeam: this.state.race.teams[0].id});
+    } else if (this.state.joinTeam) {
+      this.handleRegistrationSubmit();
+    } else {
+
     }
   }
 
-  registerButtonLabel(){
-    if (this.state.register == false) {
-      return('YES!')
-    } else if (this.state.joinTeam == 'newTeam') {
-      return('Create Team!')
+  newTeamRegister(){
+    if (this.state.newTeamRegister == false) {
+      this.setState({newTeamRegister: true})
+    } else if (this.state.newTeamName != '' && this.state.newTeamMotto != '') {
+      this.newTeamSubmit()
     } else {
-      return('Join Team!')
+
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   render(){
-    
+
     return(
       <div>
         <div className="columns small-8 medium-7" id="left">
@@ -239,12 +271,12 @@ class RacePage extends Component {
           <div className="map-registration">
             <RaceRegister
               race={this.state.race}
-              registerButtonLabel={this.registerButtonLabel}
+              handleRegistrationSubmit={this.handleRegistrationSubmit}
+              teamRegister={this.teamRegister}
+              newTeamRegister={this.newTeamRegister}
               showNewTeamForm={this.showNewTeamForm}
-              registerHandleClick={this.registerHandleClick}
               registerButtonTitle={this.registerButtonTitle}
               joinTeam={this.joinTeam}
-              handleRegistrationSubmit={this.handleRegistrationSubmit}
             />
           </div>
         </div>
