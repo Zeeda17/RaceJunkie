@@ -2,10 +2,25 @@
 
 body {
   background-color: $pinkish;
+}
+
+html *{
   font-family: 'Slabo 27px', serif, 'Roboto Slab', serif;
 }
 
+.search-bar{
+  width: 10em;
+  margin: 2em;
+  position: absolute;
+}
+
+.search-bar-results{
+  // z-index: 3;
+  position: relative;
+}
+
 .race-tile{
+  color: white;
   background-color: $blueish;
   text-align: center;
   width: 50%;

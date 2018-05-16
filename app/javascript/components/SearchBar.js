@@ -1,12 +1,13 @@
 import React from 'react';
 
 const SearchBar = props => {
-  
+
   return(
     <div className='search-bar'>
-      <label>Search</label>
-      <input type='text' name='search' onChange={props.searchChange}/>
-      {props.searchResults()}
+      <input type='text' name='search' placeholder='Search...' onChange={props.searchChange}/>
+      <div className='search-bar-results'>
+        {props.searchResults()}
+      </div>
     </div>
   )
 }
