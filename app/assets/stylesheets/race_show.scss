@@ -1,5 +1,9 @@
 @import 'defaults/colors';
 
+body{
+  font-family: 'Slabo 27px', serif, 'Roboto Slab', serif;
+}
+
 .display-teams{
   background-color: $redish;
   // border-radius: 1em;
@@ -58,8 +62,7 @@
 
 .RaceRegister{
   background-color: $redish;
-  border-radius: 1em;
-  width: 400px;
+  width: 125px;
 }
 
 .ready{

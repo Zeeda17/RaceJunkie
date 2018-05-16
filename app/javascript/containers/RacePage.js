@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 import RaceTile from '../components/RaceTile'
 import RaceRegister from '../components/RaceRegister'
 import TeamTile from '../components/TeamTile'
 import NewTeamForm from '../components/NewTeamForm'
+import SearchBar from '../components/SearchBar'
 
 class RacePage extends Component {
   constructor(props) {
@@ -11,10 +13,12 @@ class RacePage extends Component {
       race: {},
       showTeams: false,
       selectedTeams: null,
-      joinTeam: '0',
+      joinTeam: null,
       register: false,
+      newTeamRegister: false,
       newTeamName: '',
-      newTeamMotto: ''
+      newTeamMotto: '',
+      searchInput: ''
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
     this.showTeams = this.showTeams.bind(this)
@@ -22,15 +26,22 @@ class RacePage extends Component {
     this.teamButtonLabel = this.teamButtonLabel.bind(this)
     this.teamSelectClick = this.teamSelectClick.bind(this)
     this.registerButtonTitle = this.registerButtonTitle.bind(this)
-    this.registerHandleClick = this.registerHandleClick.bind(this)
+    this.registerSoloHandleClick = this.registerSoloHandleClick.bind(this)
     this.joinTeam = this.joinTeam.bind(this)
     this.teamSelect = this.teamSelect.bind(this)
     this.newTeamSubmit = this.newTeamSubmit.bind(this)
     this.newTeamNameChange = this.newTeamNameChange.bind(this)
     this.newTeamMottoChange = this.newTeamMottoChange.bind(this)
     this.showNewTeamForm = this.showNewTeamForm.bind(this)
-    this.registerButtonLabel = this.registerButtonLabel.bind(this)
+
+    this.teamRegister = this.teamRegister.bind(this)
+    this.newTeamRegister = this.newTeamRegister.bind(this)
+
+    this.searchResults = this.searchResults.bind(this)
+    this.searchChange = this.searchChange.bind(this)
   }
+
+
 
   handleRegistrationSubmit(){
     let payload =  {joinTeam: this.state.joinTeam}
@@ -108,7 +119,7 @@ class RacePage extends Component {
     }
   }
 
-  registerHandleClick(){
+  registerSoloHandleClick(){
     if (this.state.register === false){
       this.setState({register: true})
     } else if (this.state.joinTeam == 'newTeam') {
@@ -132,11 +143,9 @@ class RacePage extends Component {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
     })
     .then(response => console.log(response))
-    .then(response => response.json())
     .then(body => {
       this.setState({
-        race: this.state.race.teams.concat(body),
-        joinTeam: '0',
+        joinTeam: null,
         register: false,
         newTeamName: '',
         newTeamMotto: ''
@@ -154,8 +163,6 @@ class RacePage extends Component {
     this.setState({newTeamMotto: event.target.value})
   }
 
-  newTeamMottoChange
-
   registerButtonTitle(){
     if (this.state.register == false){
       return "Ready to run?"
@@ -171,16 +178,26 @@ class RacePage extends Component {
     this.setState({joinTeam: teamID});
   }
 
+  showNewTeamForm(){
+    if (this.state.newTeamRegister == true) {
+      return(
+        <NewTeamForm
+          newTeamSubmit={this.newTeamSubmit}
+          newTeamNameChange={this.newTeamNameChange}
+          newTeamMottoChange={this.newTeamMottoChange}
+        />
+      )
+    }
+  }
+
   joinTeam(){
-    if (this.state.register) {
+    if (this.state.joinTeam) {
       if (this.state.race.teams != null) {
         let teams = this.state.race.teams.map((team) =>{
           return(
             <option key={team.id} value={team.id}>{team.name}</option>
           )
         });
-        teams.unshift(<option key='0' value="0">-I'm running solo</option>);
-        teams.push(<option key='newTeam' value="newTeam">-I want to make a new team</option>);
 
         return(
           <div className='join-team'>
@@ -195,30 +212,61 @@ class RacePage extends Component {
     }
   }
 
-  showNewTeamForm(){
-    if (this.state.joinTeam == 'newTeam') {
-      return(
-        <NewTeamForm
-          newTeamSubmit={this.newTeamSubmit}
-          newTeamNameChange={this.newTeamNameChange}
-          newTeamMottoChange={this.newTeamMottoChange}
-        />
-      )
+  teamRegister(){
+    if (this.state.joinTeam == null) {
+      this.setState({joinTeam: this.state.race.teams[0].id});
+    } else if (this.state.joinTeam) {
+      this.handleRegistrationSubmit();
+    } else {
+
     }
   }
 
-  registerButtonLabel(){
-    if (this.state.register == false) {
-      return('YES!')
-    } else if (this.state.joinTeam == 'newTeam') {
-      return('Create Team!')
+  newTeamRegister(){
+    if (this.state.newTeamRegister == false) {
+      this.setState({newTeamRegister: true})
+    } else if (this.state.newTeamName != '' && this.state.newTeamMotto != '') {
+      this.newTeamSubmit()
     } else {
-      return('Join Team!')
+
     }
+  }
+
+  searchChange(event){
+    this.setState({searchInput: event.target.value})
+  }
+
+  searchResults(){
+    const searchText = this.state.searchInput.toLowerCase();
+    const currentTeams = this.state.race.teams;
+    let finalOutput = null;
+    let searchResults = [];
+    if (searchText) {
+      currentTeams.forEach((race) =>{
+        if (race.name.toLowerCase().search(searchText) != -1) {
+          searchResults.push(race)
+        }
+      })
+
+      if (searchResults.length != 0) {
+        finalOutput = searchResults.map((result) =>{
+          return(
+            <p key={result.id}><Link to={`/races/${result.id}`}>{result.name}</Link></p>
+          )
+        })
+      }
+
+      console.log(finalOutput);
+    }
+    return(
+      <div className='search-results'>
+        {finalOutput}
+      </div>
+    )
   }
 
   render(){
-    
+
     return(
       <div>
         <div className="columns small-8 medium-7" id="left">
@@ -231,6 +279,10 @@ class RacePage extends Component {
               <p>{this.state.race.description}</p>
               <button className='display-teams' onClick={this.teamHandleClick} >{this.teamButtonLabel()}</button>
               {this.showTeams()}
+              <SearchBar
+                searchChange={this.searchChange}
+                searchResults={this.searchResults}
+              />
             </div>
           </div>
         </div>
@@ -239,12 +291,12 @@ class RacePage extends Component {
           <div className="map-registration">
             <RaceRegister
               race={this.state.race}
-              registerButtonLabel={this.registerButtonLabel}
+              handleRegistrationSubmit={this.handleRegistrationSubmit}
+              teamRegister={this.teamRegister}
+              newTeamRegister={this.newTeamRegister}
               showNewTeamForm={this.showNewTeamForm}
-              registerHandleClick={this.registerHandleClick}
               registerButtonTitle={this.registerButtonTitle}
               joinTeam={this.joinTeam}
-              handleRegistrationSubmit={this.handleRegistrationSubmit}
             />
           </div>
         </div>
