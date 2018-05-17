@@ -71,7 +71,7 @@ Race.create!(
   name: "Jackson Jump",
   price: 100,
   distance: "5k",
-  description: "Weirldly doesn't have any jumping.",
+  description: "Weirdly doesn't have any jumping.",
   street: "280 Exeter Rd",
   city: "Epping",
   state: "NH",

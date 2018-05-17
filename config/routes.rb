@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :races, only: [:index, :show] do
         resources :registrations, only: [:create]
-        resources :teams, only: [:create]
+        resources :teams, only: [:show, :create]
       end
     end
   end

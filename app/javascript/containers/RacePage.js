@@ -255,8 +255,6 @@ class RacePage extends Component {
           )
         })
       }
-
-      console.log(finalOutput);
     }
     return(
       <div className='search-results'>
@@ -272,17 +270,19 @@ class RacePage extends Component {
         <div className="columns small-8 medium-7" id="left">
           <div className="race-breakdown">
             <div className='race-breakdown-title'>
-              <h2>{this.state.race.name} - {this.state.race.distance}</h2>
-              <h4>${this.state.race.price}</h4>
+              <h2 className='white-font'>{this.state.race.name} - {this.state.race.distance}</h2>
+              <h4 className='goldish-font'>${this.state.race.price}</h4>
             </div>
             <div className='race-breakdown-info'>
               <p>{this.state.race.description}</p>
               <button className='display-teams' onClick={this.teamHandleClick} >{this.teamButtonLabel()}</button>
               {this.showTeams()}
-              <SearchBar
-                searchChange={this.searchChange}
-                searchResults={this.searchResults}
-              />
+              <div id='search-bar-race-page'>
+                <SearchBar
+                  searchChange={this.searchChange}
+                  searchResults={this.searchResults}
+                />
+              </div>
             </div>
           </div>
         </div>

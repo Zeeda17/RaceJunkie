@@ -43,7 +43,7 @@ class FrontPage extends Component {
     if (this.state.featuredRace.length != 0) {
 
         return(
-          <div className='featured-race'>
+          <div className='race-tile'>
             <RaceTile
               race={this.state.featuredRace}
             />
