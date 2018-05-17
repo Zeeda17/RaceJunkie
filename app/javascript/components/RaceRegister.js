@@ -8,10 +8,10 @@ const RaceRegister = props => {
       <div className='ready columns'><h4>{props.registerButtonTitle()}</h4></div>
       {props.joinTeam()}
       {props.showNewTeamForm()}
-      <div className='row'>
-        <button className='RaceRegister columns' onClick={props.handleRegistrationSubmit} >Run Solo</button>
-        <button className='RaceRegister columns' onClick={props.teamRegister} >Join a Team</button>
-        <button className='RaceRegister columns' onClick={props.newTeamRegister} >New Team</button>
+      <div className='row' id='register-buttons-row'>
+        <button className='RaceRegister columns small-4 register-buttons' onClick={props.handleRegistrationSubmit} >Run Solo</button>
+        <button className='RaceRegister columns small-4 register-buttons' onClick={props.teamRegister} >Join a Team</button>
+        <button className='RaceRegister columns small-4 register-buttons end' onClick={props.newTeamRegister} >New Team</button>
       </div>
       <a href={directions} target='_blank'>
         <img width="400" href={directions} src={map} alt="Directions"/>

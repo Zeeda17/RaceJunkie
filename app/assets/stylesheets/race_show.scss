@@ -12,7 +12,7 @@ body{
 
 .race-breakdown{
   text-align: center;
-  margin: 5em auto;
+  margin: 8em auto;
   width: 75%;
   border-radius: 0.3em;
 }
@@ -31,9 +31,8 @@ body{
 }
 
 #search-bar-race-page{
-  position: static;
-  // text-align: center;
-  margin: 0 auto;
+  padding-left: 10.5em;
+  float: none;
 }
 
 .white-font{
@@ -71,7 +70,7 @@ body{
 }
 
 .map-registration{
-  padding-left: 7em;
+  padding-left: 4em;
   position: fixed;
 }
 
@@ -82,4 +81,20 @@ body{
 
 .ready{
   text-align: center;
+}
+
+.top-bar{
+  background-color: #686868;
+}
+
+.goldish-background{
+  background-color: $goldish;
+}
+
+.register-buttons{
+  margin-left: 1em;
+}
+
+#register-buttons-row{
+  // margin-right: 2em;
 }
