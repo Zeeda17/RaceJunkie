@@ -1,8 +1,6 @@
 class RaceSerializer < ActiveModel::Serializer
   attributes :id, :name, :distance, :description, :price, :street, :city, :state, :zipcode, :currentUserRunning, :users_in_team
 
-  # has_many :teams
-
   def formatted_users
     user_array = []
     object.users.each do |user|

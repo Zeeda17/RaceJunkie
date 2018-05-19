@@ -8,10 +8,4 @@ class Api::V1::RacesController < ApplicationController
   def show
     render json: Race.find(params["id"])
   end
-
-  private
-
-  def race_params
-    params.require(:race).permit()#bla bla bla)
-  end
 end

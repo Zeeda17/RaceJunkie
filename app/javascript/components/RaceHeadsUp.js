@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RaceHeadsUp = props => {
-  // debugger
+
   const signedUp = () => {
     if (props.signedUp) {
       return "YUP"
@@ -12,7 +12,7 @@ const RaceHeadsUp = props => {
 
   return(
     <div>
-      <h7>You are in team: {props.team}</h7>
+      <h7>You are in team: {teamName()}</h7>
       <h7>You are running this race: {signedUp()}</h7>
     </div>
   )

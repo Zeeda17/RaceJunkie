@@ -275,7 +275,7 @@ class RacePage extends Component {
       <div>
         <RaceHeadsUp
           signedUp={this.state.race.currentUserRunning}
-          // team={this.state.race} //this needs some messing with
+          team={this.state.race.users_in_team} //this needs some messing with
         />
         <div className="columns small-8 medium-7" id="left">
           <div className="race-breakdown">
