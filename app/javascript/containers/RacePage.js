@@ -5,6 +5,7 @@ import RaceRegister from '../components/RaceRegister'
 import TeamTile from '../components/TeamTile'
 import NewTeamForm from '../components/NewTeamForm'
 import SearchBar from '../components/SearchBar'
+import RaceHeadsUp from '../components/RaceHeadsUp'
 
 class RacePage extends Component {
   constructor(props) {
@@ -76,7 +77,13 @@ class RacePage extends Component {
   }
 
   componentDidMount(){
-    fetch(`/api/v1/races/${this.props.params.id}`)
+    fetch(`/api/v1/races/${this.props.params.id}.json`, {
+    credentials: 'same-origin',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: 'GET'})
     .then(response => {
       if (response.ok) {
         return response;
@@ -264,9 +271,13 @@ class RacePage extends Component {
   }
 
   render(){
-
+    debugger
+    console.log(this.state.race.currentUserRunning);
     return(
       <div>
+        <RaceHeadsUp
+          signedUp={this.state.race.currentUserRunning}
+        />
         <div className="columns small-8 medium-7" id="left">
           <div className="race-breakdown">
             <div className='race-breakdown-title'>
