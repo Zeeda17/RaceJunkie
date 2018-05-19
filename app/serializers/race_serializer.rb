@@ -1,7 +1,7 @@
 class RaceSerializer < ActiveModel::Serializer
-  attributes :id, :name, :distance, :description, :price, :street, :city, :state, :zipcode, :formatted_users, :currentUserRunning
+  attributes :id, :name, :distance, :description, :price, :street, :city, :state, :zipcode, :currentUserRunning, :users_in_team
 
-  has_many :teams
+  # has_many :teams
 
   def formatted_users
     user_array = []
@@ -16,7 +16,6 @@ class RaceSerializer < ActiveModel::Serializer
   end
 
   def currentUserRunning
-    binding.pry
     if current_user.nil?
       return false
     end
@@ -30,18 +29,26 @@ class RaceSerializer < ActiveModel::Serializer
   end
 
   def users_in_team
-    team_array = {}
+    output = []
+    runner_holder = []
     object.teams.each do |team|
-      user_obj = []
-      team.users.each do |user|
-        user_obj << {
-          id: user.id,
-          first_name: user.first_name,
-          last_name: user.last_name
+      team_holder = {
+        id: team.id,
+        name: team.name,
+        motto: team.motto
+      }
+      team.users.each do |runner|
+        runner_holder << {
+          id: runner.id,
+          first_name: runner.first_name,
+          last_name: runner.last_name
         }
+
       end
-      team_array << user_obj
+      team_holder.merge!(runners: runner_holder)
+      output << team_holder
     end
-    return team_array
+
+    return output
   end
 end

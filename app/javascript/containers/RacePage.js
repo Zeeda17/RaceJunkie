@@ -57,10 +57,10 @@ class RacePage extends Component {
   }
 
   showTeams(){
-    if (this.state.race.teams == null) {
+    if (this.state.race.users_in_team == null) {
       return null;
     } else if (this.state.showTeams) {
-        const allTeams = this.state.race.teams.map((team) =>{
+        const allTeams = this.state.race.users_in_team.map((team) =>{
           return(
             <div key={team.id}>
               <TeamTile
@@ -199,8 +199,8 @@ class RacePage extends Component {
 
   joinTeam(){
     if (this.state.joinTeam) {
-      if (this.state.race.teams != null) {
-        let teams = this.state.race.teams.map((team) =>{
+      if (this.state.race.users_in_team != null) {
+        let teams = this.state.race.users_in_team.map((team) =>{
           return(
             <option key={team.id} value={team.id}>{team.name}</option>
           )
@@ -221,7 +221,7 @@ class RacePage extends Component {
 
   teamRegister(){
     if (this.state.joinTeam == null) {
-      this.setState({joinTeam: this.state.race.teams[0].id});
+      this.setState({joinTeam: this.state.race.users_in_team[0].id});
     } else if (this.state.joinTeam) {
       this.handleRegistrationSubmit();
     } else {
@@ -245,7 +245,7 @@ class RacePage extends Component {
 
   searchResults(){
     const searchText = this.state.searchInput.toLowerCase();
-    const currentTeams = this.state.race.teams;
+    const currentTeams = this.state.race.users_in_team;
     let finalOutput = null;
     let searchResults = [];
     if (searchText) {
@@ -271,12 +271,11 @@ class RacePage extends Component {
   }
 
   render(){
-    debugger
-    console.log(this.state.race.currentUserRunning);
     return(
       <div>
         <RaceHeadsUp
           signedUp={this.state.race.currentUserRunning}
+          // team={this.state.race} //this needs some messing with
         />
         <div className="columns small-8 medium-7" id="left">
           <div className="race-breakdown">
