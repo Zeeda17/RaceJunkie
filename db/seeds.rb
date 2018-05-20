@@ -9,7 +9,7 @@
 # User1 = Category.find_or_create_by!(name: "Sea Monsters")
 
 User.create!(
-  email: "test@fakeemail.com",
+  email: "larry@aol.com",
   password: "password",
   password_confirmation: "password",
   first_name: "Larry",
@@ -32,6 +32,22 @@ User.create!(
   first_name: "Bob",
   last_name: "Builder",
   bio: "Can we do it? Yes we can!"
+)
+
+User.create!(
+  first_name: "John",
+  last_name: "Freddy",
+  password: "password",
+  password_confirmation: "password",
+  email: "john@aol.com"
+)
+
+User.create!(
+  first_name: "Dash",
+  last_name: "Doom",
+  password: "password",
+  password_confirmation: "password",
+  email: "dash@aol.com"
 )
 
 Race.create!(
@@ -102,17 +118,32 @@ Race.create!(
 
 Registration.create!(
   user_id: 1,
-  race_id: 1
-)
-
-Registration.create!(
-  user_id: 1,
   race_id: 2
 )
 
 Registration.create!(
-  user_id: 2,
+  user_id: 1,
+  race_id: 5
+)
+
+Registration.create!(
+  user_id: 1,
   race_id: 3
+)
+
+Registration.create!(
+  user_id: 1,
+  race_id: 1
+)
+
+Registration.create!(
+  user_id: 2,
+  race_id: 6
+)
+
+Registration.create!(
+  user_id: 2,
+  race_id: 2
 )
 
 Registration.create!(
@@ -121,8 +152,68 @@ Registration.create!(
 )
 
 Registration.create!(
-  user_id: 1,
+  user_id: 3,
   race_id: 5
+)
+
+Registration.create!(
+  user_id: 3,
+  race_id: 1
+)
+
+Registration.create!(
+  user_id: 3,
+  race_id: 2
+)
+
+Registration.create!(
+  user_id: 4,
+  race_id: 3
+)
+
+Registration.create!(
+  user_id: 4,
+  race_id: 4
+)
+
+Registration.create!(
+  user_id: 4,
+  race_id: 5
+)
+
+Registration.create!(
+  user_id: 4,
+  race_id: 1
+)
+
+Registration.create!(
+  user_id: 5,
+  race_id: 6
+)
+
+Registration.create!(
+  user_id: 5,
+  race_id: 2
+)
+
+Registration.create!(
+  user_id: 5,
+  race_id: 5
+)
+
+Registration.create!(
+  user_id: 5,
+  race_id: 4
+)
+
+Registration.create!(
+  user_id: 5,
+  race_id: 3
+)
+
+Registration.create!(
+  user_id: 5,
+  race_id: 1
 )
 
 Team.create!(
@@ -144,14 +235,19 @@ Team.create!(
 )
 
 Team.create!(
-  name: "Race",
+  name: "Check yo self before you rex yo self",
   motto: "Racing Dinos is our game",
   race_id: 2
 )
 
 Team.create!(
-  name: "Race",
-  motto: "Daning Racers",
+  name: "Dinomite",
+  race_id: 2
+)
+
+Team.create!(
+  name: "Electricsliders",
+  motto: "Dancing Racers",
   race_id: 3
 )
 
@@ -162,12 +258,22 @@ Team.create!(
 )
 
 Team.create!(
+  name: "Team Disco",
+  race_id: 3
+)
+
+Team.create!(
   name: "Easy as 123",
   race_id: 4
 )
 
 Team.create!(
   name: "Want you back",
+  race_id: 4
+)
+
+Team.create!(
+  name: "The Moonwalkers",
   race_id: 4
 )
 
@@ -183,19 +289,34 @@ Team.create!(
   race_id: 5
 )
 
-Roster.create!(
-  user_id: 1,
-  team_id: 1
+Team.create!(
+  name: "The Best Team",
+  race_id: 5
+)
+
+Team.create!(
+  name: "We are just here to drink",
+  race_id: 6
+)
+
+Team.create!(
+  name: "If found return me to the bar",
+  race_id: 6
+)
+
+Team.create!(
+  name: "Is this really a race?",
+  race_id: 6
 )
 
 Roster.create!(
   user_id: 1,
-  team_id: 3
+  team_id: 6
 )
 
 Roster.create!(
   user_id: 1,
-  team_id: 5
+  team_id: 14
 )
 
 Roster.create!(
@@ -205,17 +326,12 @@ Roster.create!(
 
 Roster.create!(
   user_id: 1,
-  team_id: 9
+  team_id: 1
 )
 
 Roster.create!(
   user_id: 2,
-  team_id: 2
-)
-
-Roster.create!(
-  user_id: 2,
-  team_id: 3
+  team_id: 16
 )
 
 Roster.create!(
@@ -225,10 +341,70 @@ Roster.create!(
 
 Roster.create!(
   user_id: 2,
+  team_id: 12
+)
+
+Roster.create!(
+  user_id: 3,
+  team_id: 13
+)
+
+Roster.create!(
+  user_id: 3,
+  team_id: 2
+)
+
+Roster.create!(
+  user_id: 3,
+  team_id: 4
+)
+
+Roster.create!(
+  user_id: 4,
   team_id: 8
 )
 
 Roster.create!(
-  user_id: 2,
+  user_id: 4,
   team_id: 10
+)
+
+Roster.create!(
+  user_id: 4,
+  team_id: 13
+)
+
+Roster.create!(
+  user_id: 4,
+  team_id: 3
+)
+
+Roster.create!(
+  user_id: 5,
+  team_id: 17
+)
+
+Roster.create!(
+  user_id: 5,
+  team_id: 4
+)
+
+Roster.create!(
+  user_id: 5,
+  team_id: 13
+)
+
+Roster.create!(
+  user_id: 5,
+  team_id: 11
+)
+
+Roster.create!(
+  user_id: 5,
+  team_id: 7
+)
+
+Roster.create!(
+  user_id: 5,
+  team_id: 3
 )

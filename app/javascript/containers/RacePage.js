@@ -221,7 +221,10 @@ class RacePage extends Component {
 
   teamRegister(){
     if (this.state.joinTeam == null) {
-      this.setState({joinTeam: this.state.race.users_in_team[0].id});
+      this.setState({
+        joinTeam: this.state.race.users_in_team[0].id,
+        newTeamRegister: false
+      });
     } else if (this.state.joinTeam) {
       this.handleRegistrationSubmit();
     } else {
@@ -231,7 +234,10 @@ class RacePage extends Component {
 
   newTeamRegister(){
     if (this.state.newTeamRegister == false) {
-      this.setState({newTeamRegister: true})
+      this.setState({
+        newTeamRegister: true,
+        joinTeam: null
+      })
     } else if (this.state.newTeamName != '' && this.state.newTeamMotto != '') {
       this.newTeamSubmit()
     } else {
