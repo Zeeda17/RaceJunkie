@@ -14,11 +14,12 @@ class RaceSerializer < ActiveModel::Serializer
   end
 
   def currentUserTeam
+    # binding.pry
     if current_user.nil? || !current_user.races.exists?(object.id)
       return nil
     end
 
-    return current_user.races.find(object.id).name
+    return current_user.teams.find_by_race_id(object.id).name
   end
 
   def currentUserRunning

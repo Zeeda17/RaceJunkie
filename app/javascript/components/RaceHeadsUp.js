@@ -3,25 +3,18 @@ import React from 'react';
 const RaceHeadsUp = props => {
 
   const signedUp = () => {
-    if (props.signedUp) {
-      return "YUP"
-    } else {
-      return 'NOPE'
-    }
-  }
-
-  const teamName = () => {
     if (props.team) {
-      return `${props.team}`
-    } else {
-      return 'NOPE'
+      return `You are in team ${props.team}`
+    } else if (props.signedUp) {
+      return 'You are signed up for this race.'
+    } {
+      return null
     }
   }
 
   return(
-    <div className='user-race-status'>
-      <h7>You are in team: {teamName()}</h7>
-      <h7>You are running this race: {signedUp()}</h7>
+    <div className='user-race-status test-find'>
+      <h7>{signedUp()}</h7><br/>
     </div>
   )
 }
