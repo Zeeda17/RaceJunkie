@@ -10,8 +10,16 @@ const RaceHeadsUp = props => {
     }
   }
 
+  const teamName = () => {
+    if (props.team) {
+      return `${props.team}`
+    } else {
+      return 'NOPE'
+    }
+  }
+
   return(
-    <div>
+    <div className='user-race-status'>
       <h7>You are in team: {teamName()}</h7>
       <h7>You are running this race: {signedUp()}</h7>
     </div>

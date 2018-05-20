@@ -1,5 +1,5 @@
 class RaceSerializer < ActiveModel::Serializer
-  attributes :id, :name, :distance, :description, :price, :street, :city, :state, :zipcode, :currentUserRunning, :users_in_team
+  attributes :id, :name, :distance, :description, :price, :street, :city, :state, :zipcode, :users_in_team, :currentUserRunning, :currentUserTeam
 
   def formatted_users
     user_array = []
@@ -11,6 +11,14 @@ class RaceSerializer < ActiveModel::Serializer
       }
     end
     return user_array
+  end
+
+  def currentUserTeam
+    if current_user.nil? || !current_user.races.exists?(object.id)
+      return nil
+    end
+
+    return current_user.races.find(object.id).name
   end
 
   def currentUserRunning
