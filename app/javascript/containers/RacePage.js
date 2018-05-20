@@ -5,6 +5,7 @@ import RaceRegister from '../components/RaceRegister'
 import TeamTile from '../components/TeamTile'
 import NewTeamForm from '../components/NewTeamForm'
 import SearchBar from '../components/SearchBar'
+import RaceHeadsUp from '../components/RaceHeadsUp'
 
 class RacePage extends Component {
   constructor(props) {
@@ -56,10 +57,10 @@ class RacePage extends Component {
   }
 
   showTeams(){
-    if (this.state.race.teams == null) {
+    if (this.state.race.users_in_team == null) {
       return null;
     } else if (this.state.showTeams) {
-        const allTeams = this.state.race.teams.map((team) =>{
+        const allTeams = this.state.race.users_in_team.map((team) =>{
           return(
             <div key={team.id}>
               <TeamTile
@@ -76,7 +77,13 @@ class RacePage extends Component {
   }
 
   componentDidMount(){
-    fetch(`/api/v1/races/${this.props.params.id}`)
+    fetch(`/api/v1/races/${this.props.params.id}.json`, {
+    credentials: 'same-origin',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: 'GET'})
     .then(response => {
       if (response.ok) {
         return response;
@@ -192,8 +199,8 @@ class RacePage extends Component {
 
   joinTeam(){
     if (this.state.joinTeam) {
-      if (this.state.race.teams != null) {
-        let teams = this.state.race.teams.map((team) =>{
+      if (this.state.race.users_in_team != null) {
+        let teams = this.state.race.users_in_team.map((team) =>{
           return(
             <option key={team.id} value={team.id}>{team.name}</option>
           )
@@ -214,7 +221,7 @@ class RacePage extends Component {
 
   teamRegister(){
     if (this.state.joinTeam == null) {
-      this.setState({joinTeam: this.state.race.teams[0].id});
+      this.setState({joinTeam: this.state.race.users_in_team[0].id});
     } else if (this.state.joinTeam) {
       this.handleRegistrationSubmit();
     } else {
@@ -238,7 +245,7 @@ class RacePage extends Component {
 
   searchResults(){
     const searchText = this.state.searchInput.toLowerCase();
-    const currentTeams = this.state.race.teams;
+    const currentTeams = this.state.race.users_in_team;
     let finalOutput = null;
     let searchResults = [];
     if (searchText) {
@@ -264,9 +271,14 @@ class RacePage extends Component {
   }
 
   render(){
-
     return(
       <div>
+        <div className='race-heads-up-box'>
+          <RaceHeadsUp
+            signedUp={this.state.race.currentUserRunning}
+            team={this.state.race.currentUserTeam}
+          />
+        </div>
         <div className="columns small-8 medium-7" id="left">
           <div className="race-breakdown">
             <div className='race-breakdown-title'>
