@@ -264,7 +264,7 @@ class RacePage extends Component {
       if (searchResults.length != 0) {
         finalOutput = searchResults.map((result) =>{
           return(
-            <p key={result.id}><Link to={`/races/${result.id}`}>{result.name}</Link></p>
+            <p key={result.id}>{result.name}</p>
           )
         })
       }
