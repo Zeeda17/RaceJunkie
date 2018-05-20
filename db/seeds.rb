@@ -229,6 +229,11 @@ Team.create!(
 )
 
 Team.create!(
+  name: "Perpetual Puppies",
+  race_id: 1
+)
+
+Team.create!(
   name: "DinoRoars!",
   motto: "ROAR!",
   race_id: 2

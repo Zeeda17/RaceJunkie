@@ -36,8 +36,8 @@ class RaceSerializer < ActiveModel::Serializer
 
   def users_in_team
     output = []
-    runner_holder = []
     object.teams.each do |team|
+      runner_holder = []
       team_holder = {
         id: team.id,
         name: team.name,
