@@ -11,9 +11,11 @@ class Api::V1::RegistrationsController < ApplicationController
 
   def create
     Registration.create!(race_id: params["race_id"], user: current_user)
-    if params["joinTeam"] != '0'
+    if !params["joinTeam"].nil?
       Roster.create!(user: current_user, team_id: params["joinTeam"])
     end
+
+    render json: Race.find(params['race_id'])
   end
 
   private
