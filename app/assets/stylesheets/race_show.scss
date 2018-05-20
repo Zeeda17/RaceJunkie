@@ -47,12 +47,14 @@ body{
 #right{
   float: right;
   padding: 5em;
-  padding-left: 3em
+  padding-left: 3em;
+  margin-top: -5em;
 }
 
 #left{
   float: left;
   padding-left: 5em;
+  margin-top: -5em;
 }
 .test-find{
   border-style: solid;
@@ -100,7 +102,14 @@ body{
 }
 
 .user-race-status{
-  position: absolute;
-  text-align: right;
-  // margin: 1em 1em 0 0;
+  padding: 1em;
+  float: center;
+  text-align: center;
+  margin: 1em auto 0 auto;
+  width: 20%;
+  background-color: $transparent-blueish;
+}
+
+.race-heads-up-box{
+  height: 5em;
 }

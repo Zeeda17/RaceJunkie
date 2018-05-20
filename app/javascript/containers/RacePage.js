@@ -273,10 +273,12 @@ class RacePage extends Component {
   render(){
     return(
       <div>
-        <RaceHeadsUp
-          signedUp={this.state.race.currentUserRunning}
-          team={this.state.race.currentUserTeam}
-        />
+        <div className='race-heads-up-box'>
+          <RaceHeadsUp
+            signedUp={this.state.race.currentUserRunning}
+            team={this.state.race.currentUserTeam}
+          />
+        </div>
         <div className="columns small-8 medium-7" id="left">
           <div className="race-breakdown">
             <div className='race-breakdown-title'>
