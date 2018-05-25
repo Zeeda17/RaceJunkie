@@ -3,7 +3,7 @@ import React from 'react';
 const RaceRegister = props => {
   let map = null;
   let directions = null;
-  if ('street' in props.race) {
+  if (typeof props.race.city !== 'undefined') {
     map = `https://maps.googleapis.com/maps/api/staticmap?center=${props.race.street},${props.race.city},${props.race.state}&zoom=16&size=400x400&markers=color:red%7C${props.race.street},${props.race.city},${props.race.state}&key=AIzaSyDKXWUi5QTlNwpafPbvqtGKNl7APMk0atE`
 
     directions = `https://www.google.com/maps/dir//${props.race.street},${props.race.city},${props.race.state}`
