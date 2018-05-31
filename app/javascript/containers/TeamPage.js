@@ -37,13 +37,19 @@ class TeamPage extends Component {
 
   displayRunners(){
     if (this.state.team.formatted_users) {
-      const runners = this.state.team.formatted_users.map((runner) => {
+      if (this.state.team.formatted_users.length == 0) {
         return(
-          <h5 key={runner.id} >{runner.first_name} {runner.last_name}</h5>
+          <p>This team needs runners</p>
         )
-      })
-
+      } else {
+        const runners = this.state.team.formatted_users.map((runner) => {
+          return(
+            <h5 key={runner.id} >{runner.first_name} {runner.last_name}</h5>
+          )
+        })
       return(runners)
+      }
+
     }
   }
 
