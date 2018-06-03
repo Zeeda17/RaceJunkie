@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const TeamTile = props => {
 
@@ -8,7 +9,7 @@ const TeamTile = props => {
 
   return(
     <div className='team-tile' onClick={handleClick} >
-      <h2>{props.team.name}</h2>
+      <h2><Link to={`/teams/${props.team.id}`}>{props.team.name}</Link></h2>
     </div>
   )
 }
