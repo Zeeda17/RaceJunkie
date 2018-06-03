@@ -18,12 +18,12 @@ Displays name of race the team is running as well as team name and optional team
 
 * Under the Hood:
 
-- Ruby on Rails 5.2.0
+  - Ruby on Rails 5.2.0
 
-- PostgreSQL as the database for Active Record
+  - PostgreSQL as the database for Active Record
 
-- RSPEC and Capybara for testing
+  - RSPEC and Capybara for testing
 
-- Foundation for HTML Layout
+  - Foundation for HTML Layout
 
-- Google's Map APIs
+  - Google's Map APIs
