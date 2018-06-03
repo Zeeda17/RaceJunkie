@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 class RunnerPage extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class RunnerPage extends Component {
   render(){
     return(
       <div>
-        <p>HELLLLLOOO!</p>
+        <h1>{this.state.runner.first_name} {this.state.runner.last_name}</h1>
       </div>
     )
   }
