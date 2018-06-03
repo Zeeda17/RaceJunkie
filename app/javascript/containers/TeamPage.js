@@ -8,7 +8,6 @@ class TeamPage extends Component {
     }
     this.displayRunners = this.displayRunners.bind(this);
     this.currentUserRunning = this.currentUserRunning.bind(this);
-    this.raceName = this.raceName.bind(this);
   }
 
   componentDidMount(){
@@ -70,18 +69,14 @@ class TeamPage extends Component {
     }
   }
 
-  raceName(){
-    
-  }
-
   render(){
     return(
       <div>
+        <h7>{this.state.team.raceName}</h7>
         <h1>{this.state.team.name}</h1>
-        <h3>{this.state.team.motto}</h3>
+        <h4>{this.state.team.motto}</h4>
         {this.displayRunners()}
         {this.currentUserRunning()}
-        {this.raceName()}
       </div>
     )
   }
