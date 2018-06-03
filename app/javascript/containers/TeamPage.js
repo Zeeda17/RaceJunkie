@@ -7,6 +7,8 @@ class TeamPage extends Component {
       team: {}
     }
     this.displayRunners = this.displayRunners.bind(this);
+    this.currentUserRunning = this.currentUserRunning.bind(this);
+    this.raceName = this.raceName.bind(this);
   }
 
   componentDidMount(){
@@ -47,10 +49,29 @@ class TeamPage extends Component {
             <h5 key={runner.id} >{runner.first_name} {runner.last_name}</h5>
           )
         })
-      return(runners)
+      return(
+        <div>
+          <h4>Team Members:</h4>
+          {runners}
+        </div>
+      )
       }
 
     }
+  }
+
+  currentUserRunning(){
+    if (this.state.team.currentUserRunning) {
+      return(
+        <div>
+          <p>Welcome to your team</p>
+        </div>
+      )
+    }
+  }
+
+  raceName(){
+    
   }
 
   render(){
@@ -59,6 +80,8 @@ class TeamPage extends Component {
         <h1>{this.state.team.name}</h1>
         <h3>{this.state.team.motto}</h3>
         {this.displayRunners()}
+        {this.currentUserRunning()}
+        {this.raceName()}
       </div>
     )
   }

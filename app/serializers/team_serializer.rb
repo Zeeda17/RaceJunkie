@@ -1,5 +1,5 @@
 class TeamSerializer < ActiveModel::Serializer
-  attributes :id, :name, :motto, :race_id, :formatted_users
+  attributes :id, :name, :motto, :race_id, :formatted_users, :currentUserRunning, :raceName
 
   def formatted_users
     user_array = []
@@ -11,5 +11,22 @@ class TeamSerializer < ActiveModel::Serializer
       }
     end
     return user_array
+  end
+
+  def currentUserRunning
+    if current_user.nil?
+      return false
+    end
+
+    formatted_users.each do |user|
+      if current_user.id == user[:id]
+        return true
+      end
+    end
+    return false
+  end
+
+  def raceName
+    Team.find(object.id).race.name
   end
 end
