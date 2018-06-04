@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 class TeamPage extends Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class TeamPage extends Component {
       } else {
         const runners = this.state.team.formatted_users.map((runner) => {
           return(
-            <h5 key={runner.id} >{runner.first_name} {runner.last_name}</h5>
+            <h5 key={runner.id} ><Link to={`/runners/${runner.id}`}>{runner.first_name} {runner.last_name}</Link></h5>
           )
         })
       return(
