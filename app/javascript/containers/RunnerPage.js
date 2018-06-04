@@ -7,6 +7,7 @@ class RunnerPage extends Component {
     this.state = {
       runner: {}
     }
+    this.displayRaces = this.displayRaces.bind(this);
   }
 
   componentDidMount(){
@@ -35,10 +36,26 @@ class RunnerPage extends Component {
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
+  displayRaces(){
+    if (typeof this.state.runner.id !== 'undefined') {
+      const races = this.state.runner.user_races.map((race) => {
+        let dash = null;
+        if (race.team) {
+          dash = "-";
+        }
+        return(
+          <p key={race.id}><Link to={`/races/${race.id}`}>{race.name}</Link> {dash} <Link to={`/teams/${race.team_id}`}>{race.team}</Link></p>
+        )
+      })
+      return(races)
+    }
+  }
+
   render(){
     return(
       <div>
         <h1>{this.state.runner.first_name} {this.state.runner.last_name}</h1>
+        {this.displayRaces()}
       </div>
     )
   }
