@@ -3,15 +3,36 @@ class UserSerializer < ActiveModel::Serializer
 
   def user_races
     output = []
-    object.races.each do |race|
-      # binding.pry
+
+    object.teams.each do |team|
       race_holder = {
-        id: race.id,
-        name: race.name
+        id: team.race_id,
+        name: team.race.name,
+        team: team.name,
+        team_id: team.id
       }
       output << race_holder
     end
-    output << object.teams
+
+    object.races.each do |race|
+      unique_race = true
+
+      output.each do |event|
+        if event[:id] == race.id
+          unique_race = false
+        end
+      end
+
+      if unique_race
+        output << {
+          id: race.id,
+          name: race.name,
+          team: nil,
+          team_id: nil
+        }
+      end
+    end
+
     return output
   end
 end
