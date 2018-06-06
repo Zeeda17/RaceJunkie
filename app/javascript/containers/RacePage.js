@@ -21,31 +21,34 @@ class RacePage extends Component {
       newTeamMotto: '',
       searchInput: ''
     }
-    this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
-    this.showTeams = this.showTeams.bind(this)
-    this.teamHandleClick = this.teamHandleClick.bind(this)
-    this.teamButtonLabel = this.teamButtonLabel.bind(this)
-    this.teamSelectClick = this.teamSelectClick.bind(this)
-    this.registerButtonTitle = this.registerButtonTitle.bind(this)
-    this.registerSoloHandleClick = this.registerSoloHandleClick.bind(this)
-    this.joinTeam = this.joinTeam.bind(this)
-    this.teamSelect = this.teamSelect.bind(this)
-    this.newTeamSubmit = this.newTeamSubmit.bind(this)
-    this.newTeamNameChange = this.newTeamNameChange.bind(this)
-    this.newTeamMottoChange = this.newTeamMottoChange.bind(this)
-    this.showNewTeamForm = this.showNewTeamForm.bind(this)
+    this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this);
+    this.showTeams = this.showTeams.bind(this);
+    this.teamHandleClick = this.teamHandleClick.bind(this);
+    this.teamButtonLabel = this.teamButtonLabel.bind(this);
+    this.teamSelectClick = this.teamSelectClick.bind(this);
+    this.registerButtonTitle = this.registerButtonTitle.bind(this);
+    this.registerSoloHandleClick = this.registerSoloHandleClick.bind(this);
+    this.joinTeam = this.joinTeam.bind(this);
+    this.teamSelect = this.teamSelect.bind(this);
+    this.newTeamSubmit = this.newTeamSubmit.bind(this);
+    this.newTeamNameChange = this.newTeamNameChange.bind(this);
+    this.newTeamMottoChange = this.newTeamMottoChange.bind(this);
+    this.showNewTeamForm = this.showNewTeamForm.bind(this);
 
-    this.teamRegister = this.teamRegister.bind(this)
-    this.newTeamRegister = this.newTeamRegister.bind(this)
+    this.teamRegister = this.teamRegister.bind(this);
+    this.newTeamRegister = this.newTeamRegister.bind(this);
 
-    this.searchResults = this.searchResults.bind(this)
-    this.searchChange = this.searchChange.bind(this)
+    this.searchResults = this.searchResults.bind(this);
+    this.searchChange = this.searchChange.bind(this);
   }
 
 
 
   handleRegistrationSubmit(){
-    let payload =  {joinTeam: this.state.joinTeam}
+    let payload =  {
+      joinTeam: this.state.joinTeam,
+      old_team: this.state.race.currentUserTeam
+    }
 
     fetch(`/api/v1/races/${this.props.params.id}/registrations`, {
       credentials: 'same-origin',
