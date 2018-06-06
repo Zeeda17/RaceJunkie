@@ -18,7 +18,6 @@ class Api::V1::TeamsController < ApplicationController
   end
 
   def update
-    binding.pry
     editRoster = Roster.find_by(team_id: params["id"], user: current_user)
     editRoster.race_id = params["joinTeam"]
   end
