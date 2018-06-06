@@ -1,5 +1,4 @@
 ![Build Status](https://codeship.com/projects/3ec4b280-2bd2-0136-29b8-0a7f7ac78d5b/status?branch=master)
-[![Code Climate](https://codeclimate.com/github/Zeeda17/currerace/badges/gpa.svg)](https://codeclimate.com/github/Zeeda17/currerace)
 
 RaceJunkie is a platform for race enthusiasts to find races to run ether alone or with a team.
 
