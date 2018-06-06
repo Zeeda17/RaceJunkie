@@ -17,18 +17,15 @@ class Api::V1::RegistrationsController < ApplicationController
       editRoster.save!
     else
       if Registration.find_by(race_id: params["race_id"], user: current_user)
-        # binding.pry
         Roster.create!(user: current_user, team_id: params["joinTeam"])
       else
-        # binding.pry
         Registration.create!(race_id: params["race_id"], user: current_user)
         if !params["joinTeam"].nil?
           Roster.create!(user: current_user, team_id: params["joinTeam"])
         end
       end
     end
-    # binding.pry
-    # render json: Race.find(params['race_id'])
+    render json: Race.find(params['race_id'])
   end
 
   private
