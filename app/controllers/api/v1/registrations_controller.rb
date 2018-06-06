@@ -20,8 +20,8 @@ class Api::V1::RegistrationsController < ApplicationController
         Roster.create!(user: current_user, team_id: params["joinTeam"])
       end
     end
-
-    render json: Race.find(params['race_id'])
+    binding.pry
+    # render json: Race.find(params['race_id'])
   end
 
   private

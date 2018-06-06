@@ -57,6 +57,7 @@ class RacePage extends Component {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
     })
     .then(response => console.log(response))
+    .then(window.location.reload())
   }
 
   showTeams(){
@@ -139,8 +140,7 @@ class RacePage extends Component {
     }
   }
 
-  newTeamSubmit(event){
-    // event.preventDefault()
+  newTeamSubmit(){
     let payload =  {
       newTeamName: this.state.newTeamName,
       newTeamMotto: this.state.newTeamMotto
