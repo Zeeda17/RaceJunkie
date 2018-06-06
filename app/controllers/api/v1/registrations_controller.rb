@@ -10,9 +10,7 @@ class Api::V1::RegistrationsController < ApplicationController
   end
 
   def create
-    # binding.pry
     if Roster.find_by(team_id: params["old_team"]["id"], user: current_user)
-      # binding.pry
       editRoster = Roster.find_by(team_id: params["old_team"]["id"], user: current_user)
       editRoster.team_id = params["joinTeam"]
       editRoster.save!

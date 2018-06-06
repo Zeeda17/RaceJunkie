@@ -40,7 +40,6 @@ class RacePage extends Component {
 
     this.searchResults = this.searchResults.bind(this);
     this.searchChange = this.searchChange.bind(this);
-    this.changeTeam = this.changeTeam.bind(this);
   }
 
 
@@ -78,22 +77,6 @@ class RacePage extends Component {
       } else {
         return null;
       }
-  }
-
-  changeTeam(){//--------------------------------
-    // debugger;
-    let payload =  {
-      joinTeam: this.state.joinTeam,
-      old_team: this.state.race.currentUserTeam
-    }
-
-    fetch(`/api/v1/teams/${this.state.race.currentUserTeam.id}.json`, {
-      credentials: 'same-origin',
-      method: 'PATCH',
-      body: JSON.stringify(payload),
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
-    })
-    .then(response => console.log(response))
   }
 
   componentDidMount(){
@@ -328,7 +311,6 @@ class RacePage extends Component {
         <div className="columns small-4 medium-5" id="right">
           <div className="map-registration">
             <RaceRegister
-              changeTeam={this.changeTeam}
               race={this.state.race}
               handleRegistrationSubmit={this.handleRegistrationSubmit}
               teamRegister={this.teamRegister}
