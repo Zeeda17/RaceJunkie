@@ -46,7 +46,10 @@ class RacePage extends Component {
 
 
   handleRegistrationSubmit(){
-    let payload =  {joinTeam: this.state.joinTeam}
+    let payload =  {
+      joinTeam: this.state.joinTeam,
+      old_team: this.state.race.currentUserTeam
+    }
 
     fetch(`/api/v1/races/${this.props.params.id}/registrations`, {
       credentials: 'same-origin',
@@ -78,7 +81,11 @@ class RacePage extends Component {
   }
 
   changeTeam(){//--------------------------------
-    let payload =  {joinTeam: this.state.joinTeam}
+    // debugger;
+    let payload =  {
+      joinTeam: this.state.joinTeam,
+      old_team: this.state.race.currentUserTeam
+    }
 
     fetch(`/api/v1/teams/${this.state.race.currentUserTeam.id}.json`, {
       credentials: 'same-origin',
