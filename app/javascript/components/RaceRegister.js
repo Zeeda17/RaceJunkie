@@ -11,6 +11,7 @@ const RaceRegister = props => {
 
   return (
     <div>
+      <h1 onClick={props.changeTeam}>HELLLOOO!!!!</h1>
       <div className='ready columns'><h4>{props.registerButtonTitle()}</h4></div>
       {props.joinTeam()}
       {props.showNewTeamForm()}

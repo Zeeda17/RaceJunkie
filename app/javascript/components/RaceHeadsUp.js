@@ -6,7 +6,7 @@ const RaceHeadsUp = props => {
     if (props.team) {
       return(
         <div className='user-race-status'>
-          <h7>{`You are in team ${props.team}`}</h7><br/>
+          <h7>{`You are in team ${props.team.name}`}</h7><br/>
         </div>
       )
     } else if (props.signedUp) {

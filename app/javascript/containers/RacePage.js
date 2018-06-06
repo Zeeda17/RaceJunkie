@@ -21,25 +21,26 @@ class RacePage extends Component {
       newTeamMotto: '',
       searchInput: ''
     }
-    this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this)
-    this.showTeams = this.showTeams.bind(this)
-    this.teamHandleClick = this.teamHandleClick.bind(this)
-    this.teamButtonLabel = this.teamButtonLabel.bind(this)
-    this.teamSelectClick = this.teamSelectClick.bind(this)
-    this.registerButtonTitle = this.registerButtonTitle.bind(this)
-    this.registerSoloHandleClick = this.registerSoloHandleClick.bind(this)
-    this.joinTeam = this.joinTeam.bind(this)
-    this.teamSelect = this.teamSelect.bind(this)
-    this.newTeamSubmit = this.newTeamSubmit.bind(this)
-    this.newTeamNameChange = this.newTeamNameChange.bind(this)
-    this.newTeamMottoChange = this.newTeamMottoChange.bind(this)
-    this.showNewTeamForm = this.showNewTeamForm.bind(this)
+    this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this);
+    this.showTeams = this.showTeams.bind(this);
+    this.teamHandleClick = this.teamHandleClick.bind(this);
+    this.teamButtonLabel = this.teamButtonLabel.bind(this);
+    this.teamSelectClick = this.teamSelectClick.bind(this);
+    this.registerButtonTitle = this.registerButtonTitle.bind(this);
+    this.registerSoloHandleClick = this.registerSoloHandleClick.bind(this);
+    this.joinTeam = this.joinTeam.bind(this);
+    this.teamSelect = this.teamSelect.bind(this);
+    this.newTeamSubmit = this.newTeamSubmit.bind(this);
+    this.newTeamNameChange = this.newTeamNameChange.bind(this);
+    this.newTeamMottoChange = this.newTeamMottoChange.bind(this);
+    this.showNewTeamForm = this.showNewTeamForm.bind(this);
 
-    this.teamRegister = this.teamRegister.bind(this)
-    this.newTeamRegister = this.newTeamRegister.bind(this)
+    this.teamRegister = this.teamRegister.bind(this);
+    this.newTeamRegister = this.newTeamRegister.bind(this);
 
-    this.searchResults = this.searchResults.bind(this)
-    this.searchChange = this.searchChange.bind(this)
+    this.searchResults = this.searchResults.bind(this);
+    this.searchChange = this.searchChange.bind(this);
+    this.changeTeam = this.changeTeam.bind(this);
   }
 
 
@@ -74,6 +75,22 @@ class RacePage extends Component {
       } else {
         return null;
       }
+  }
+
+  changeTeam(){//--------------------------------
+    // debugger;
+    let payload =  {
+      joinTeam: this.state.joinTeam,
+      old_team: this.state.race.currentUserTeam
+    }
+
+    fetch(`/api/v1/teams/${this.state.race.currentUserTeam.id}`, {
+      credentials: 'same-origin',
+      method: 'PATCH',
+      body: JSON.stringify(payload),
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+    })
+    .then(response => console.log(response))
   }
 
   componentDidMount(){
@@ -308,6 +325,7 @@ class RacePage extends Component {
         <div className="columns small-4 medium-5" id="right">
           <div className="map-registration">
             <RaceRegister
+              changeTeam={this.changeTeam}
               race={this.state.race}
               handleRegistrationSubmit={this.handleRegistrationSubmit}
               teamRegister={this.teamRegister}

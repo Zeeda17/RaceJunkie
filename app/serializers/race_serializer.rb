@@ -18,7 +18,7 @@ class RaceSerializer < ActiveModel::Serializer
       return nil
     end
 
-    return current_user.teams.find_by_race_id(object.id).name
+    return current_user.teams.find_by_race_id(object.id)
   end
 
   def currentUserRunning
