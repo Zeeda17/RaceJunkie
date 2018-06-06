@@ -78,13 +78,9 @@ class RacePage extends Component {
   }
 
   changeTeam(){//--------------------------------
-    // debugger;
-    let payload =  {
-      joinTeam: this.state.joinTeam,
-      old_team: this.state.race.currentUserTeam
-    }
+    let payload =  {joinTeam: this.state.joinTeam}
 
-    fetch(`/api/v1/teams/${this.state.race.currentUserTeam.id}`, {
+    fetch(`/api/v1/teams/${this.state.race.currentUserTeam.id}.json`, {
       credentials: 'same-origin',
       method: 'PATCH',
       body: JSON.stringify(payload),
