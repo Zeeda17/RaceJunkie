@@ -57,7 +57,7 @@ class RacePage extends Component {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
     })
     .then(response => console.log(response))
-    .then(window.location.reload())
+    // .then(window.location.reload())
   }
 
   showTeams(){

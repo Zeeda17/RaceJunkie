@@ -10,11 +10,13 @@ class Api::V1::RegistrationsController < ApplicationController
   end
 
   def create
+    editRoster = Roster.find_by(team_id: params["old_team"]["id"], user: current_user)
     if Roster.find_by(team_id: params["old_team"]["id"], user: current_user)
-      editRoster = Roster.find_by(team_id: params["old_team"]["id"], user: current_user)
+      binding.pry#hellllo
       editRoster.team_id = params["joinTeam"]
       editRoster.save!
     else
+      binding.pry
       Registration.create!(race_id: params["race_id"], user: current_user)
       if !params["joinTeam"].nil?
         Roster.create!(user: current_user, team_id: params["joinTeam"])
