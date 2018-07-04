@@ -12,7 +12,7 @@ const RaceRegister = props => {
   return (
     <div>
       <div className='ready columns'><h4>Want to join a team?</h4></div>
-      {props.joinTeam()}
+      {props.joinTeamForm()}
       {props.showNewTeamForm()}
       <div className='row' id='register-buttons-row'>
         <button className='RaceRegister columns small-4 register-buttons' onClick={props.handleRegistrationSubmit} >Run Solo</button>

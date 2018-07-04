@@ -13,8 +13,8 @@ class RacePage extends Component {
     this.state = {
       race: {},
       showTeamsButton: false,
-      joinTeamButton: false,
-      joinTeam: null,//does too much, make this be the team holder, then rename
+      joinTeamForm: false,
+      joinTeamSelected: null,
       newTeamRegister: false,
       newTeamName: '',
       newTeamMotto: '',
@@ -24,7 +24,7 @@ class RacePage extends Component {
     this.showTeamsButton = this.showTeamsButton.bind(this);
     this.teamHandleClick = this.teamHandleClick.bind(this);
     this.showTeamButtonLabel = this.showTeamButtonLabel.bind(this);
-    this.joinTeam = this.joinTeam.bind(this);
+    this.joinTeamForm = this.joinTeamForm.bind(this);
     this.teamSelect = this.teamSelect.bind(this);
     this.newTeamSubmit = this.newTeamSubmit.bind(this);
     this.newTeamNameChange = this.newTeamNameChange.bind(this);
@@ -42,7 +42,7 @@ class RacePage extends Component {
 
   handleRegistrationSubmit(){
     let payload =  {
-      joinTeam: this.state.joinTeam,
+      joinTeam: this.state.joinTeamSelected,
       old_team: this.state.race.currentUserTeam
     }
 
@@ -132,7 +132,7 @@ class RacePage extends Component {
     .then(response => console.log(response))
     .then(body => {
       this.setState({
-        joinTeam: null,
+        joinTeamSelected: null,
         newTeamName: '',
         newTeamMotto: ''
       })
@@ -141,18 +141,16 @@ class RacePage extends Component {
   }
 
   newTeamNameChange(event){
-    event.preventDefault()
     this.setState({newTeamName: event.target.value})
   }
 
   newTeamMottoChange(event){
-    event.preventDefault()
     this.setState({newTeamMotto: event.target.value})
   }
 
   teamSelect(event){
     let teamID = event.target.value
-    this.setState({joinTeam: teamID});
+    this.setState({joinTeamSelected: teamID});
   }
 
   showNewTeamForm(){
@@ -167,8 +165,8 @@ class RacePage extends Component {
     }
   }
 
-  joinTeam(){
-    if (this.state.joinTeam) {
+  joinTeamForm(){
+    if (this.state.joinTeamForm) {
       if (this.state.race.users_in_team != null) {
         let teams = this.state.race.users_in_team.map((team) =>{
           return(
@@ -190,12 +188,12 @@ class RacePage extends Component {
   }
 
   teamRegister(){
-    if (this.state.joinTeam == null) {
+    if (this.state.joinTeamForm === false) {
       this.setState({
-        joinTeam: this.state.race.users_in_team[0].id,
+        joinTeamForm: true,//this.state.race.users_in_team[0].id,
         newTeamRegister: false
       });
-    } else if (this.state.joinTeam) {
+    } else if (this.state.joinTeamForm) {
       this.handleRegistrationSubmit();
     } else {
 
@@ -206,7 +204,8 @@ class RacePage extends Component {
     if (this.state.newTeamRegister == false) {
       this.setState({
         newTeamRegister: true,
-        joinTeam: null
+        joinTeamSelected: null,
+        joinTeamForm: false
       })
     } else if (this.state.newTeamName != '') {
       this.newTeamSubmit()
@@ -283,7 +282,7 @@ class RacePage extends Component {
               teamRegister={this.teamRegister}
               newTeamRegister={this.newTeamRegister}
               showNewTeamForm={this.showNewTeamForm}
-              joinTeam={this.joinTeam}
+              joinTeamForm={this.joinTeamForm}
             />
           </div>
         </div>
