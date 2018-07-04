@@ -12,22 +12,18 @@ class RacePage extends Component {
     super(props);
     this.state = {
       race: {},
-      showTeams: false,
-      selectedTeams: null,
-      joinTeam: null,
-      register: false,
+      showTeamsButton: false,
+      joinTeamButton: false,
+      joinTeam: null,//does too much, make this be the team holder, then rename
       newTeamRegister: false,
       newTeamName: '',
       newTeamMotto: '',
       searchInput: ''
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this);
-    this.showTeams = this.showTeams.bind(this);
+    this.showTeamsButton = this.showTeamsButton.bind(this);
     this.teamHandleClick = this.teamHandleClick.bind(this);
-    this.teamButtonLabel = this.teamButtonLabel.bind(this);
-    this.teamSelectClick = this.teamSelectClick.bind(this);
-    this.registerButtonTitle = this.registerButtonTitle.bind(this);
-    this.registerSoloHandleClick = this.registerSoloHandleClick.bind(this);
+    this.showTeamButtonLabel = this.showTeamButtonLabel.bind(this);
     this.joinTeam = this.joinTeam.bind(this);
     this.teamSelect = this.teamSelect.bind(this);
     this.newTeamSubmit = this.newTeamSubmit.bind(this);
@@ -60,15 +56,14 @@ class RacePage extends Component {
     .then(window.location.reload())
   }
 
-  showTeams(){
+  showTeamsButton(){
     if (this.state.race.users_in_team == null) {
       return null;
-    } else if (this.state.showTeams) {
+    } else if (this.state.showTeamsButton) {
         const allTeams = this.state.race.users_in_team.map((team) =>{
           return(
             <div key={team.id}>
               <TeamTile
-                teamSelectClick={this.teamSelectClick}
                 team={team}
               />
             </div>
@@ -106,8 +101,8 @@ class RacePage extends Component {
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-  teamButtonLabel(){
-    if (this.state.showTeams){
+  showTeamButtonLabel(){
+    if (this.state.showTeamsButton){
       return "Hide Teams"
     } else {
       return "Show Teams"
@@ -115,28 +110,10 @@ class RacePage extends Component {
   }
 
   teamHandleClick(){
-    if (this.state.showTeams){
-      this.setState({showTeams: false})
+    if (this.state.showTeamsButton){
+      this.setState({showTeamsButton: false})
     } else {
-      this.setState({showTeams: true})
-    }
-  }
-
-  teamSelectClick(id){
-    if (this.state.selectedTeams == id){
-      this.setState({selectedTeams: null})
-    } else {
-      this.setState({selectedTeams: id})
-    }
-  }
-
-  registerSoloHandleClick(){
-    if (this.state.register === false){
-      this.setState({register: true})
-    } else if (this.state.joinTeam == 'newTeam') {
-      this.newTeamSubmit()
-    } else {
-      this.handleRegistrationSubmit()
+      this.setState({showTeamsButton: true})
     }
   }
 
@@ -156,7 +133,6 @@ class RacePage extends Component {
     .then(body => {
       this.setState({
         joinTeam: null,
-        register: false,
         newTeamName: '',
         newTeamMotto: ''
       })
@@ -172,16 +148,6 @@ class RacePage extends Component {
   newTeamMottoChange(event){
     event.preventDefault()
     this.setState({newTeamMotto: event.target.value})
-  }
-
-  registerButtonTitle(){
-    if (this.state.register == false){
-      return "Ready to run?"
-    } else if (this.state.joinTeam == 'newTeam') {
-      return ('Make your team')
-    } else {
-      return "Want to join a team?"
-    }
   }
 
   teamSelect(event){
@@ -297,8 +263,8 @@ class RacePage extends Component {
             </div>
             <div className='race-breakdown-info'>
               <p>{this.state.race.description}</p>
-              <button className='display-teams' onClick={this.teamHandleClick} >{this.teamButtonLabel()}</button>
-              {this.showTeams()}
+              <button className='display-teams' onClick={this.teamHandleClick} >{this.showTeamButtonLabel()}</button>
+              {this.showTeamsButton()}
               <div id='search-bar-race-page'>
                 <SearchBar
                   searchChange={this.searchChange}
@@ -317,7 +283,6 @@ class RacePage extends Component {
               teamRegister={this.teamRegister}
               newTeamRegister={this.newTeamRegister}
               showNewTeamForm={this.showNewTeamForm}
-              registerButtonTitle={this.registerButtonTitle}
               joinTeam={this.joinTeam}
             />
           </div>
