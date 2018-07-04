@@ -15,7 +15,6 @@ class RacePage extends Component {
       showTeamsButton: false,
       joinTeamButton: false,
       joinTeam: null,//does too much, make this be the team holder, then rename
-      register: false,
       newTeamRegister: false,
       newTeamName: '',
       newTeamMotto: '',
@@ -25,7 +24,6 @@ class RacePage extends Component {
     this.showTeamsButton = this.showTeamsButton.bind(this);
     this.teamHandleClick = this.teamHandleClick.bind(this);
     this.showTeamButtonLabel = this.showTeamButtonLabel.bind(this);
-    this.registerButtonTitle = this.registerButtonTitle.bind(this);
     this.joinTeam = this.joinTeam.bind(this);
     this.teamSelect = this.teamSelect.bind(this);
     this.newTeamSubmit = this.newTeamSubmit.bind(this);
@@ -135,7 +133,6 @@ class RacePage extends Component {
     .then(body => {
       this.setState({
         joinTeam: null,
-        register: false,
         newTeamName: '',
         newTeamMotto: ''
       })
@@ -151,16 +148,6 @@ class RacePage extends Component {
   newTeamMottoChange(event){
     event.preventDefault()
     this.setState({newTeamMotto: event.target.value})
-  }
-
-  registerButtonTitle(){
-    if (this.state.register == false){
-      return "Ready to run?"
-    } else if (this.state.joinTeam == 'newTeam') {
-      return ('Make your team')
-    } else {
-      return "Want to join a team?"
-    }
   }
 
   teamSelect(event){
@@ -296,7 +283,6 @@ class RacePage extends Component {
               teamRegister={this.teamRegister}
               newTeamRegister={this.newTeamRegister}
               showNewTeamForm={this.showNewTeamForm}
-              registerButtonTitle={this.registerButtonTitle}
               joinTeam={this.joinTeam}
             />
           </div>
