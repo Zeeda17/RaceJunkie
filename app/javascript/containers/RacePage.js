@@ -14,7 +14,7 @@ class RacePage extends Component {
       race: {},
       showTeamsButton: false,
       joinTeamButton: false,
-      joinTeam: null,//does too much
+      joinTeam: null,//does too much, make this be the team holder, then rename
       register: false,
       newTeamRegister: false,
       newTeamName: '',
@@ -26,7 +26,6 @@ class RacePage extends Component {
     this.teamHandleClick = this.teamHandleClick.bind(this);
     this.showTeamButtonLabel = this.showTeamButtonLabel.bind(this);
     this.registerButtonTitle = this.registerButtonTitle.bind(this);
-    this.registerSoloHandleClick = this.registerSoloHandleClick.bind(this);
     this.joinTeam = this.joinTeam.bind(this);
     this.teamSelect = this.teamSelect.bind(this);
     this.newTeamSubmit = this.newTeamSubmit.bind(this);
@@ -117,16 +116,6 @@ class RacePage extends Component {
       this.setState({showTeamsButton: false})
     } else {
       this.setState({showTeamsButton: true})
-    }
-  }
-
-  registerSoloHandleClick(){
-    if (this.state.register === false){
-      this.setState({register: true})
-    } else if (this.state.joinTeam == 'newTeam') {
-      this.newTeamSubmit()
-    } else {
-      this.handleRegistrationSubmit()
     }
   }
 
