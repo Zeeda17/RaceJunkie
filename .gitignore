@@ -16,7 +16,6 @@
 # Ignore uploaded files in development
 /storage/*
 
-/node_modules
 /yarn-error.log
 
 /public/assets
@@ -32,3 +31,4 @@ yarn-debug.log*
 
 /coverage
 .env
+node_modules
