@@ -94,11 +94,27 @@ body{
 }
 
 .register-buttons{
-  margin-left: 1em;
+  //margin-left: 1em;
+  /*float: left;
+  outline: 100px;
+  outline-color: black;
+  margin: 50%,50%,50%,500%;
+  padding: 50%,50%,50%,500%;*/
+  border-color: black;
+  border-style: solid;
+  // margin: auto;
+}
+
+.testing{
+  border-color: black;
+  border-style: solid;
 }
 
 #register-buttons-row{
-  // margin-right: 2em;
+  //margin-right: 2em;
+  display: grid;
+  padding: 0% 50%;
+  //padding: 500% 00% 500% 00%;
 }
 
 .user-race-status{

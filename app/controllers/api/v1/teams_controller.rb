@@ -14,7 +14,7 @@ class Api::V1::TeamsController < ApplicationController
       race_id: params["race_id"]
     )
 
-    Roster.create!(user: current_user, team: newTeam)
+    Roster.create!(user: current_user, team: newTeam, race: newTeam)
   end
 
   def update

@@ -18,7 +18,8 @@ class RacePage extends Component {
       newTeamRegister: false,
       newTeamName: '',
       newTeamMotto: '',
-      searchInput: ''
+      searchInput: '',
+      showSignUpButton: true
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this);
     this.showTeamsButton = this.showTeamsButton.bind(this);
@@ -30,6 +31,7 @@ class RacePage extends Component {
     this.newTeamNameChange = this.newTeamNameChange.bind(this);
     this.newTeamMottoChange = this.newTeamMottoChange.bind(this);
     this.showNewTeamForm = this.showNewTeamForm.bind(this);
+    this.showSignUpButton = this.showSignUpButton.bind(this);
 
     this.teamRegister = this.teamRegister.bind(this);
     this.newTeamRegister = this.newTeamRegister.bind(this);
@@ -46,6 +48,7 @@ class RacePage extends Component {
       old_team: this.state.race.currentUserTeam
     }
 
+    //debugger
     fetch(`/api/v1/races/${this.props.params.id}/registrations`, {
       credentials: 'same-origin',
       method: 'POST',
@@ -53,7 +56,7 @@ class RacePage extends Component {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
     })
     .then(response => console.log(response))
-    .then(window.location.reload())
+    //.then(window.location.reload())
   }
 
   showTeamsButton(){
@@ -187,6 +190,15 @@ class RacePage extends Component {
     }
   }
 
+  showSignUpButton(){
+    //debugger
+    if (this.state.showSignUpButton) {
+      return(
+        <button className='RaceRegister rows small-4 register-buttons' /*onClick={props.handleRegistrationSubmit}*/ >Sign up!</button>
+      )
+    }
+  }
+
   teamRegister(){
     if (this.state.joinTeamForm === false) {
       this.setState({
@@ -283,6 +295,7 @@ class RacePage extends Component {
               newTeamRegister={this.newTeamRegister}
               showNewTeamForm={this.showNewTeamForm}
               joinTeamForm={this.joinTeamForm}
+              showSignUpButton={this.showSignUpButton}
             />
           </div>
         </div>

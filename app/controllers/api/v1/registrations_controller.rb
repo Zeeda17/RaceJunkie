@@ -10,14 +10,17 @@ class Api::V1::RegistrationsController < ApplicationController
   end
 
   def create
-    # binding.pry#hellllo
+    # Move user from old team to new team
     if !params["old_team"].nil?
       editRoster = Roster.find_by(team_id: params["old_team"]["id"], user: current_user)
       editRoster.team_id = params["joinTeam"]
       editRoster.save!
     else
+      # User already registered to race, just add to team
       if Registration.find_by(race_id: params["race_id"], user: current_user)
         Roster.create!(user: current_user, team_id: params["joinTeam"])
+      
+      # Sign up user for race and maybe team
       else
         Registration.create!(race_id: params["race_id"], user: current_user)
         if !params["joinTeam"].nil?
