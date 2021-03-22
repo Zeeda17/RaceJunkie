@@ -19,7 +19,10 @@ class RacePage extends Component {
       newTeamName: '',
       newTeamMotto: '',
       searchInput: '',
-      showSignUpButton: true
+      showSignUpButton: true,
+      showJoinTeamButton: false,
+      showNewTeamButton: false,
+      showExistingTeamButton: false
     }
     this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this);
     this.showTeamsButton = this.showTeamsButton.bind(this);
@@ -30,8 +33,17 @@ class RacePage extends Component {
     this.newTeamSubmit = this.newTeamSubmit.bind(this);
     this.newTeamNameChange = this.newTeamNameChange.bind(this);
     this.newTeamMottoChange = this.newTeamMottoChange.bind(this);
+
+    this.showExistingTeamButton = this.showExistingTeamButton.bind(this);
     this.showNewTeamForm = this.showNewTeamForm.bind(this);
     this.showSignUpButton = this.showSignUpButton.bind(this);
+    this.showJoinTeamButton = this.showJoinTeamButton.bind(this);
+    this.showNewTeamButton = this.showNewTeamButton.bind(this);
+    this.showRunSoloButton = this.showRunSoloButton.bind(this);
+    this.displayRegisterText = this.displayRegisterText.bind(this);
+
+    this.handleBeginSignUp = this.handleBeginSignUp.bind(this);
+    this.handleFindTeam = this.handleFindTeam.bind(this);
 
     this.teamRegister = this.teamRegister.bind(this);
     this.newTeamRegister = this.newTeamRegister.bind(this);
@@ -39,8 +51,6 @@ class RacePage extends Component {
     this.searchResults = this.searchResults.bind(this);
     this.searchChange = this.searchChange.bind(this);
   }
-
-
 
   handleRegistrationSubmit(){
     let payload =  {
@@ -57,6 +67,23 @@ class RacePage extends Component {
     })
     .then(response => console.log(response))
     //.then(window.location.reload())
+  }
+
+  displayRegisterText(){
+    var newSignUpText = 'Sign up?';
+    var joinTeamText = 'Which team do you want to join?'
+    var createTeamText = 'Make a new team!'
+    var runSoloOrTeam = 'How would you like to run?'
+
+    if (this.state.joinTeamForm) {
+      return(joinTeamText)
+    } else if (this.state.showRunSoloButton) {
+      return(runSoloOrTeam)
+    } else if (this.state.showSignUpButton) {
+      return(newSignUpText)
+    } else if (this.state.newTeamRegister) {
+      return(createTeamText)
+    }
   }
 
   showTeamsButton(){
@@ -156,6 +183,33 @@ class RacePage extends Component {
     this.setState({joinTeamSelected: teamID});
   }
 
+  showRunSoloButton(){
+    if (this.state.showRunSoloButton) {
+      this.setState({showSignUpButton: false})
+      return(
+        <button className='RaceRegister rows small-4 register-buttons' onClick={this.handleRegistrationSubmit} >Run Solo</button>
+      )
+    }
+  }
+
+  showNewTeamButton(){
+    if (this.state.showNewTeamButton) {
+      this.setState({showSignUpButton: false})
+      return(
+        <button className='RaceRegister rows small-4 register-buttons' onClick={this.newTeamRegister} >Create New Team</button>
+      )
+    }
+  }
+
+  showJoinTeamButton(){
+    if (this.state.showJoinTeamButton) {
+      this.setState({showSignUpButton: false})
+      return(
+        <button className='RaceRegister rows small-4 register-buttons' onClick={this.teamRegister} >Join a Team</button>
+      )
+    }
+  }
+
   showNewTeamForm(){
     if (this.state.newTeamRegister == true) {
       return(
@@ -190,12 +244,39 @@ class RacePage extends Component {
     }
   }
 
+  handleBeginSignUp(){
+    this.setState({
+      showSignUpButton: false,
+      showJoinTeamButton: true,
+      showRunSoloButton: true,
+    })
+  }
+
   showSignUpButton(){
-    //debugger
     if (this.state.showSignUpButton) {
       return(
-        <button className='RaceRegister rows small-4 register-buttons' /*onClick={props.handleRegistrationSubmit}*/ >Sign up!</button>
+        <button className='RaceRegister rows small-4 register-buttons' onClick={this.handleBeginSignUp} >Sign up!</button>
       )
+    } else {
+      //return()
+    }
+  }
+
+  handleFindTeam(){
+    this.setState({
+      showSignUpButton: false,
+      showJoinTeamButton: true,
+      showRunSoloButton: false,
+    })
+  }
+
+  showExistingTeamButton(){
+    if (this.state.showExistingTeamButton) {
+      return(
+        <button className='RaceRegister rows small-4 register-buttons' onClick={this.handleFindTeam} >Find a team</button>
+      )
+    } else {
+      //return()
     }
   }
 
@@ -203,7 +284,8 @@ class RacePage extends Component {
     if (this.state.joinTeamForm === false) {
       this.setState({
         joinTeamForm: true,//this.state.race.users_in_team[0].id,
-        newTeamRegister: false
+        newTeamRegister: false,
+        showSignUpButton: false
       });
     } else if (this.state.joinTeamForm) {
       this.handleRegistrationSubmit();
@@ -217,7 +299,8 @@ class RacePage extends Component {
       this.setState({
         newTeamRegister: true,
         joinTeamSelected: null,
-        joinTeamForm: false
+        joinTeamForm: false,
+        showSignUpButton: false
       })
     } else if (this.state.newTeamName != '') {
       this.newTeamSubmit()
@@ -296,6 +379,13 @@ class RacePage extends Component {
               showNewTeamForm={this.showNewTeamForm}
               joinTeamForm={this.joinTeamForm}
               showSignUpButton={this.showSignUpButton}
+              displayRegisterText={this.displayRegisterText}
+              showJoinTeamButton={this.showJoinTeamButton}
+              showNewTeamButton={this.showNewTeamButton}
+              showRunSoloButton={this.showRunSoloButton}
+              handleBeginSignUp={this.handleBeginSignUp}
+              showExistingTeamButton={this.showExistingTeamButton}
+              handleFindTeam={this.handleFindTeam}
             />
           </div>
         </div>

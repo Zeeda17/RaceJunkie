@@ -11,14 +11,15 @@ const RaceRegister = props => {
 
   return (
     <div>
-      <div className='ready rows'><h4>Want to join a team?</h4></div>
+      <div className='ready rows'><h4>{props.displayRegisterText()}</h4></div>
       {props.joinTeamForm()}
       {props.showNewTeamForm()}
       <div className='' id='register-buttons-row'>
         {props.showSignUpButton()}
-        <button className='RaceRegister rows small-4 register-buttons' onClick={props.handleRegistrationSubmit} >Run Solo</button>
-        <button className='RaceRegister rows small-4 register-buttons' onClick={props.teamRegister} >Join a Team</button>
-        <button className='RaceRegister rows small-4 register-buttons' onClick={props.newTeamRegister} >New Team</button>
+        {props.showRunSoloButton()}
+        {props.showJoinTeamButton()}
+        {props.showExistingTeamButton()}
+        {props.showNewTeamButton()}        
       </div>
       <a href={directions} target='_blank'>
         <img width="400" href={directions} src={map} alt="Directions"/>
